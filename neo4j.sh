@@ -2,7 +2,7 @@
 
 sys_version=`cat /etc/issue`
 
-if cat /etc/issue | grep "Ubuntu 16.04.2 LTS" == ""; then
+if cat /etc/issue | grep "Ubuntu 16.04.2 LTS"==""; then
     echo "Use Ubuntu 16.04.2 LTS to run this Shell Script!"
 #    退出码（exit status，或exit code）的约定：
 #    0表示成功（Zero - Success）
