@@ -50,9 +50,9 @@ function set_neo4j_as_service {
     \n
     [Service]\n
     Type=forking\n
-    ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
-    ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
-    ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
+    ExecStart=/soft/$1/bin/neo4j start\n
+    ExecReload=/soft/$1/bin/neo4j restart\n
+    ExecStop=/soft/$1/bin/neo4j stop\n
     RestartSec=10\n
     \n
     [Install]\n
@@ -62,11 +62,12 @@ function set_neo4j_as_service {
     systemctl enable neo4j.service
     systemctl start neo4j.service
 }
+
 package_path="./package/"
 neo4j_path="neo4j-community-3.2.1-unix.tar.gz"
 final_path=${package_path}${neo4j_path}
 
-check_package
+check_package ${neo4j_path}
 
 tar -xf ${final_path} -C /soft/
 
