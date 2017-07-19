@@ -72,8 +72,8 @@ tar -xf ${final_path} -C /soft/
 
 set_neo4j_as_service
 
-is-active=`systemctl is-active opensips.service`
-if [[ $is-active != active ]]; then
+is_active=`systemctl is-active opensips.service`
+if [[ $is_active != active ]]; then
     echo "Neo4j install failure, Please use 'systemctl status neo4j.service'"
 else
     echo "Neo4j install success"
