@@ -14,35 +14,37 @@ if cat /etc/issue | grep "Ubuntu 16.04.2 LTS" == ""; then
     exit 2
 fi
 
-package_path="./package/"
-neo4j_path="neo4j-community-3.2.1-unix.tar.gz"
-final_path=${package_path}${neo4j_path}
-# check neo4j-community-3.2.1-unix.tar.gz exists
-if find . -name ${neo4j_path} == ""; then
-    wget https://neo4j.com/artifact.php?name=neo4j-community-3.2.1-unix.tar.gz -O ${final_path}
-fi
-
-tar -xf ${final_path} -C /soft/
-
-echo -e "[Unit]\n
-Description=Neo4j Service\n
-After=network.target\n
-\n
-[Service]\n
-Type=forking\n
-ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
-ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
-ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
-RestartSec=10\n
-\n
-[Install]\n
-WantedBy=multi-user.target" > /etc/systemd/system/neo4j.service
-
-systemctl daemon-reload
-systemctl enable neo4j.service
-systemctl start neo4j.service
-
-if systemctl is-active opensips.service != "active"; then
-    echo "Neo4j install failure, Please use 'systemctl status neo4j.service'"
-fi
-echo "Neo4j install success"
+#package_path="./package/"
+#neo4j_path="neo4j-community-3.2.1-unix.tar.gz"
+#final_path=${package_path}${neo4j_path}
+## check neo4j-community-3.2.1-unix.tar.gz exists
+#if find . -name ${neo4j_path} == ""; then
+#    wget https://neo4j.com/artifact.php?name=neo4j-community-3.2.1-unix.tar.gz -O ${final_path}
+#fi
+#
+#tar -xf ${final_path} -C /soft/
+#
+## > 覆盖
+## >> 追加
+#echo -e "[Unit]\n
+#Description=Neo4j Service\n
+#After=network.target\n
+#\n
+#[Service]\n
+#Type=forking\n
+#ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
+#ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
+#ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
+#RestartSec=10\n
+#\n
+#[Install]\n
+#WantedBy=multi-user.target" > /etc/systemd/system/neo4j.service
+#
+#systemctl daemon-reload
+#systemctl enable neo4j.service
+#systemctl start neo4j.service
+#
+#if systemctl is-active opensips.service != "active"; then
+#    echo "Neo4j install failure, Please use 'systemctl status neo4j.service'"
+#fi
+#echo "Neo4j install success"
