@@ -67,9 +67,10 @@ function check_package {
 function set_application_as_service {
     application_name=$1
     application_conf=$2
+    echo $application_conf
     # > 覆盖
     # >> 追加
-    echo -e ${application_conf} > /etc/systemd/system/${application_name}.service
+    echo -e $application_conf > /etc/systemd/system/${application_name}.service
 
     systemctl daemon-reload
     systemctl enable ${application_name}.service
