@@ -54,10 +54,14 @@ check_is_active_over neo4j
 
 sleep 3
 echo "set neo4j password."
-curl -X "POST" "http://127.0.0.1:7474/user/neo4j/password" \
-     -H "Content-Type: application/json" \
-     -u neo4j:neo4j \
-     -d $'{"password": "111111"}'
+
+# 这个命令在shell 不好使，不知道为啥，可能水土不服
+#curl -X "POST" "http://127.0.0.1:7474/user/neo4j/password" \
+#     -H "Content-Type: application/json" \
+#     -u neo4j:neo4j \
+#     -d $'{"password": "111111"}'
+# 用这个命令替代 需要安装 apt install httpie
+http -a neo4j:neo4j POST http://localhost:7474/user/neo4j/password password=foobar
 if  [ $? -ne 0 ] ; then
     echo "neo4j set password success"
     exit 0
