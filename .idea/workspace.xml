@@ -29,8 +29,8 @@
       <file leaf-file-name="mongo.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mongo.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="107" column="28" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="28" />
+            <state relative-caret-position="271">
+              <caret line="98" column="46" lean-forward="false" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -534,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500515661259</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="test mongod and neo4j">
+      <created>1500516035653</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1500516035653</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -869,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mongo.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="107" column="28" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="28" />
+        <state relative-caret-position="271">
+          <caret line="98" column="46" lean-forward="false" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
           <folding />
         </state>
       </provider>
