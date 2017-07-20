@@ -21,19 +21,8 @@ source utils/service-utils.sh
 
 
 # Application Config
-application_conf="[Unit]\n
-    Description=Neo4j Service\n
-    After=network.target\n
-    \n
-    [Service]\n
-    Type=forking\n
-    ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
-    ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
-    ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
-    RestartSec=10\n
-    \n
-    [Install]\n
-    WantedBy=multi-user.target"
+application_conf="[Unit]\nDescription=Neo4j Service\nAfter=network.target\n\n[Service]\nType=forking\nExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\nExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\nExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target"
+
 # 验证系统
 check_system
 
