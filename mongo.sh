@@ -22,8 +22,7 @@ function create_mongod_config {
 }
 
 function genernate_mongo_user_conf_js {
-    echo -e "
-conn = new Mongo();
+    echo -e "conn = new Mongo();
 adminDB = conn.getDB(\"admin\");  //选择数据库
 adminDB.createUser({
     user: \"admin\",
