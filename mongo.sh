@@ -24,18 +24,21 @@ function create_mongod_config {
 function genernate_mongo_user_conf_js {
     echo -e "conn = new Mongo();
 adminDB = conn.getDB(\"admin\");  //选择数据库
-adminDB.createUser({
+var adminCreate = adminDB.createUser({
     user: \"admin\",
     pwd: \"admin\",
     roles: [ { role: \"userAdminAnyDatabase\", db: \"admin\" } ]
 })
 birdnestDB = conn.getDB(\"birdnest\");
-birdnestDB.createUser({
+var birdnestCreate = birdnestDB.createUser({
     user: \"yjh\",
     pwd: \"yjh123456790\",
     roles: [ { role: \"readWrite\", db: \"birdnest\" } ]
-})" > /tmp/create_user.js
+})
+printjson(adminCreate)
+printjson(birdnestDB)" > /tmp/create_user.js
 }
+
 # Application Config
 application_conf="[Unit]\n
 Description=MongoDB Service\n
