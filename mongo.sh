@@ -31,7 +31,7 @@ db.createUser({
     roles: [ { role: 'userAdminAnyDatabase', db: 'admin' } ]
 })
 
-db = conn.getSiblingDB('birdnest')
+db = conn.getDB('birdnest')
 db.createUser({
     user: 'yjh',
     pwd: 'yjh123456790',
