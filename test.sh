@@ -3,7 +3,7 @@
 package_file="mongodb-linux-x86_64-ubuntu1604-3.4.4.tgz"
 echo ${package_file%%.*}
 
-echo ${package_file%.*}
+echo ${package_file%-*}
 
 varible2="12345${varible%%.*}67890qwertyuiopasdfghjklzxcvbnm"
 echo $varible2

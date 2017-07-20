@@ -10,7 +10,7 @@
 
 source utils/utils.sh
 source utils/service-utils.sh
-
+source utils/smelly_and_long.sh
 #    $0：是脚本本身的名字；
 #    $n: 方法参数传参
 #    $#：是传给脚本的参数个数；
@@ -21,19 +21,7 @@ source utils/service-utils.sh
 
 
 # Application Config
-application_conf="[Unit]\n
-Description=Neo4j Service\n
-After=network.target\n
-\n
-[Service]\n
-Type=forking\n
-ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
-ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
-ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
-RestartSec=10\n
-\n
-[Install]\n
-WantedBy=multi-user.target"
+
 
 # 验证系统
 check_system
@@ -56,9 +44,19 @@ check_package ${package_file} ${package_distory} ${package_url}
 # 解压
 tar -xf ${package_distory}${package_file} -C /soft/
 
+# 修改配置文件
+echo -e $neo4j_config >> /soft/${package_file%-*}/conf/neo4j.conf
+
 # 设置为服务
-set_application_as_service neo4j "$application_conf"
+set_application_as_service neo4j "$neo4j_application_conf"
 
 # 检查是否安装成功
 check_is_active_over neo4j
+if  [ $? -ne 0 ] ; then
+    echo "neo4j install fail"
+    exit 0
+fi
+
+curl -H "Content-Type: application/json" -X POST -d '{"password":"111111"}' -u neo4j:neo4j http://localhost:7474/user/neo4j/password
+
 exit $?

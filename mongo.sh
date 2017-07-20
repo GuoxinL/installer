@@ -10,7 +10,7 @@
 
 source utils/utils.sh
 source utils/service-utils.sh
-
+source utils/smelly_and_long.sh
 #${varible##*string} 从左向右截取最后一个string后的字符串
 #${varible#*string}从左向右截取第一个string后的字符串
 #${varible%%string*}从右向左截取最后一个string后的字符串
@@ -18,39 +18,12 @@ source utils/service-utils.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
-    echo -e "processManagement:\n    fork: true\nnet:\n    bindIp: 0.0.0.0\n    port: 27117\nstorage:\n    dbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\nsystemLog:\n    destination: file\n    path: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n    logAppend: true\nstorage:\n    journal:\n        enabled: true\n$1security:\n    $1authorization: enabled" > /soft/$2/conf/mongod.conf
+    echo -e $mongodb_config > /soft/$2/conf/mongod.conf
 }
 
 function genernate_mongo_user_conf_js {
-    echo -e "
-conn=new Mongo('localhost:27117')
-db = conn.getDB('admin')
-db.createUser({
-    user: 'admin',
-    pwd: 'admin',
-    roles: [ { role: 'userAdminAnyDatabase', db: 'admin' } ]
-})
-
-db = conn.getDB('birdnest')
-db.createUser({
-    user: 'yjh',
-    pwd: 'yjh123456790',
-    roles: [ { role: 'readWrite', db: 'birdnest' } ]
-})" > /tmp/create_user.js
+    echo -e $mongodb_config_create_user_js > /tmp/create_user.js
 }
-
-# Application Config
-application_conf="[Unit]\n
-Description=MongoDB Service\n
-After=network.target\n
-\n
-[Service]\n
-Type=forking\n
-ExecStart=/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongod --config /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/conf/mongod.conf\n
-RestartSec=10\n
-\n
-[Install]\n
-WantedBy=multi-user.target"
 
 # 验证系统
 check_system
@@ -82,7 +55,7 @@ mkdir /soft/${package_file%.*}/log
 create_mongod_config "#" ${package_file%.*}
 
 # 设置为服务
-set_application_as_service mongod "$application_conf"
+set_application_as_service mongod "$mongodb_application_conf"
 
 # 检查运行状态
 check_is_active_over mongod
@@ -94,26 +67,47 @@ fi
 genernate_mongo_user_conf_js
 
 ##导入配置文件
-#/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo
-#/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
-#
-#create_mongod_config "" ${package_file%.*}
-#
-#systemctl restart mongod.service
-#
-## 检查运行状态
-#check_is_active_over mongod
-#if  [ $? -eq 1 ] ; then
-#    exit 1
-#fi
-#
-#/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
-#
-#if [[ $? -eq 0 ]]; then
-#    echo "Mongo login success."
-#else
-#    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
-#fi
-#
-## 检查是否安装成功
-#check_is_active_over mongod
+/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
+
+create_mongod_config "" ${package_file%.*}
+
+systemctl restart mongod.service
+
+# 检查运行状态
+check_is_active_over mongod
+if  [ $? -eq 1 ] ; then
+    exit 1
+fi
+
+/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
+
+if [[ $? -eq 0 ]]; then
+    echo "Mongo login success."
+else
+    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
+fi
+
+# 检查是否安装成功
+check_is_active_over mongod
+
+# Bolt connector
+dbms.connector.bolt.tls_level=OPTIONAL
+dbms.connector.bolt.listen_address=0.0.0.0:7687
+dbms.connector.http.listen_address=0.0.0.0:7474
+dbms.connector.https.listen_address=0.0.0.0:7473
+
+
+
+# Bolt connector
+dbms.connector.bolt.enabled=true
+#dbms.connector.bolt.tls_level=OPTIONAL
+#dbms.connector.bolt.listen_address=:7687
+
+# HTTP Connector. There must be exactly one HTTP connector.
+dbms.connector.http.enabled=true
+#dbms.connector.http.listen_address=:7474
+
+# HTTPS Connector. There can be zero or one HTTPS connectors.
+dbms.connector.https.enabled=true
+#dbms.connector.https.listen_address=:7473
+
