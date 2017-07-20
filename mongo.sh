@@ -85,7 +85,7 @@ package_url="https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-3.
 check_package ${package_file} ${package_distory} ${package_url}
 
 # 解压
-tar -xf ${package_file}${package_distory} -C /soft/
+tar -xf ${package_distory}${package_file} -C /soft/
 
 # 配置mongo
 mkdir /soft/${package_distory%%.*}/conf
