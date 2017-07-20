@@ -53,11 +53,13 @@ set_application_as_service neo4j "$neo4j_service_conf"
 # 检查是否安装成功
 check_is_active_over neo4j
 
+sleep 3
 echo "set neo4j password."
-curl -H "Content-Type: application/json" -X POST -d '{"password":"111111"}' -u neo4j:neo4j http://localhost:7474/user/neo4j/password
+echo `curl -H "Content-Type: application/json" -X POST -d '{"password":"111111"}' -u neo4j:neo4j "http://127.0.0.1:7474/user/neo4j/password"`
 
 if  [ $? -ne 0 ] ; then
     echo "neo4j set password success"
     exit 0
 fi
+
 exit $?
