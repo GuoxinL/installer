@@ -22,15 +22,14 @@ function create_mongod_config {
 }
 
 function genernate_mongo_user_conf_js {
-    echo -e "conn = new Mongo();
-adminDB = conn.getDB(\"admin\");  //选择数据库
-var adminCreate = adminDB.createUser({
+    echo -e "var db = connect('admin');
+var adminCreate = db.createUser({
     user: \"admin\",
     pwd: \"admin\",
     roles: [ { role: \"userAdminAnyDatabase\", db: \"admin\" } ]
 })
-birdnestDB = conn.getDB(\"birdnest\");
-var birdnestCreate = birdnestDB.createUser({
+var db = connect('birdnest');
+var birdnestCreate = db.createUser({
     user: \"yjh\",
     pwd: \"yjh123456790\",
     roles: [ { role: \"readWrite\", db: \"birdnest\" } ]
