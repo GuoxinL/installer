@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/bashsupport_project.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/installer.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/preferred-vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongo.sh" afterPath="$PROJECT_DIR$/mongo.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -29,8 +37,18 @@
       <file leaf-file-name="mongo.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mongo.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="20" column="325" lean-forward="false" selection-start-line="20" selection-start-column="325" selection-end-line="20" selection-end-column="325" />
+            <state relative-caret-position="414">
+              <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,6 +138,7 @@
       <find>package_distory</find>
       <find>${package_file%%.*}</find>
       <find>install success</find>
+      <find>/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongod --config /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/conf/mongod.conf</find>
     </findStrings>
     <replaceStrings>
       <replace>=</replace>
@@ -140,13 +159,13 @@
         <option value="$PROJECT_DIR$/system-init.sh" />
         <option value="$PROJECT_DIR$/depend/util.sh" />
         <option value="$PROJECT_DIR$/depend/verification-system.sh" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/utils/verification-system-util.sh" />
         <option value="$PROJECT_DIR$/utils/service.sh" />
         <option value="$PROJECT_DIR$/utils/utils.sh" />
         <option value="$PROJECT_DIR$/utils/service-utils.sh" />
         <option value="$PROJECT_DIR$/neo4j.sh" />
         <option value="$PROJECT_DIR$/test.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mongo.sh" />
       </list>
     </option>
@@ -569,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500517354706</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="test mongod and neo4j">
+      <created>1500518164463</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1500518164463</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -846,14 +872,6 @@
     <entry file="file://$PROJECT_DIR$/java8.py" />
     <entry file="file://$PROJECT_DIR$/java.py" />
     <entry file="file://$PROJECT_DIR$/system-init.py" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -902,10 +920,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mongo.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="20" column="325" lean-forward="false" selection-start-line="20" selection-start-column="325" selection-end-line="20" selection-end-column="325" />
+        <state relative-caret-position="414">
+          <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
           <folding />
         </state>
       </provider>

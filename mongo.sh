@@ -23,14 +23,15 @@ function create_mongod_config {
 
 function genernate_mongo_user_conf_js {
     echo -e "
-use admin
-db.createUser({
+conn = new Mongo();
+adminDB = conn.getDB(\"admin\");  //选择数据库
+adminDB.createUser({
     user: \"admin\",
     pwd: \"admin\",
     roles: [ { role: \"userAdminAnyDatabase\", db: \"admin\" } ]
 })
-use birdnest
-db.createUser({
+birdnestDB = conn.getDB(\"birdnest\");
+birdnestDB.createUser({
     user: \"yjh\",
     pwd: \"yjh123456790\",
     roles: [ { role: \"readWrite\", db: \"birdnest\" } ]
@@ -91,8 +92,8 @@ fi
 genernate_mongo_user_conf_js
 
 ##导入配置文件
-/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo
-#/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
+#/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo
+#/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
 #
 #create_mongod_config "" ${package_file%.*}
 #
