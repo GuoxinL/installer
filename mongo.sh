@@ -24,20 +24,19 @@ function create_mongod_config {
 function genernate_mongo_user_conf_js {
     echo -e "
 conn=new Mongo()
-db = conn.getDB('admin')
-var adminCreate = db.createUser({
-    user: \"admin\",
-    pwd: \"admin\",
-    roles: [ { role: \"userAdminAnyDatabase\", db: \"admin\" } ]
+db = conn.getSiblingDB('admin')
+db.createUser({
+    user: 'admin',
+    pwd: 'admin',
+    roles: [ { role: 'userAdminAnyDatabase', db: 'admin' } ]
 })
-db = conn.getDB('admin')
-var birdnestCreate = db.createUser({
-    user: \"yjh\",
-    pwd: \"yjh123456790\",
-    roles: [ { role: \"readWrite\", db: \"birdnest\" } ]
-})
-printjson(adminCreate)
-printjson(birdnestDB)" > /tmp/create_user.js
+
+db = conn.getSiblingDB('birdnest')
+db.createUser({
+    user: 'yjh',
+    pwd: 'yjh123456790',
+    roles: [ { role: 'readWrite', db: 'birdnest' } ]
+})" > /tmp/create_user.js
 }
 
 # Application Config
