@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongo.sh" afterPath="$PROJECT_DIR$/mongo.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo4j.sh" afterPath="$PROJECT_DIR$/neo4j.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/smelly_and_long.sh" afterPath="$PROJECT_DIR$/utils/smelly_and_long.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongo.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mongo.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongo.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="415">
@@ -78,21 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="service-utils.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="neo4j.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="neo4j.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neo4j.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="397">
+              <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -142,8 +130,8 @@
       <find>/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongod --config /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/conf/mongod.conf</find>
       <find>yjh</find>
       <find>package_distory</find>
-      <find>install success</find>
       <find>application_conf</find>
+      <find>install success</find>
     </findStrings>
     <replaceStrings>
       <replace>=</replace>
@@ -170,9 +158,9 @@
         <option value="$PROJECT_DIR$/utils/service-utils.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/test.sh" />
-        <option value="$PROJECT_DIR$/neo4j.sh" />
         <option value="$PROJECT_DIR$/utils/smelly_and_long.sh" />
         <option value="$PROJECT_DIR$/mongo.sh" />
+        <option value="$PROJECT_DIR$/neo4j.sh" />
       </list>
     </option>
   </component>
@@ -671,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500529936694</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="test mongod and neo4j">
+      <created>1500530173119</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1500530173119</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -990,14 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system-init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -1014,22 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1042,6 +1013,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="87" column="2" lean-forward="true" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system-init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo4j.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
           <folding />
         </state>
       </provider>
