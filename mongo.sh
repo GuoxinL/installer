@@ -84,7 +84,7 @@ mkdir /soft/${package_distory%%.*}/log
 create_mongod_config "#" ${package_distory%%.*}
 
 # 设置为服务
-set_application_as_service mongod ${application_conf}
+set_application_as_service mongod "${application_conf}"
 
 # 检查运行状态
 check_is_active_over mongod
