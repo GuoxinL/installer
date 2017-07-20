@@ -24,7 +24,7 @@ function create_mongod_config {
 function genernate_mongo_user_conf_js {
     echo -e "
 conn=new Mongo()
-db = conn.getSiblingDB('admin')
+db = conn.getDB('admin')
 db.createUser({
     user: 'admin',
     pwd: 'admin',
