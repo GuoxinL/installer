@@ -60,4 +60,5 @@ tar -xf ${package_distory}${package_file} -C /soft/
 set_application_as_service neo4j "$application_conf"
 
 # 检查是否安装成功
-exit `check_is_active_over neo4j`
+check_is_active_over neo4j
+exit $?
