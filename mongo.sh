@@ -77,8 +77,8 @@ if  [ $? -eq 0 ] ; then
 fi
 
 # 定义安装包相关信息
-package_file="./package/"
-package_distory="mongodb-linux-x86_64-ubuntu1604-3.4.4.tgz"
+package_distory="./package/"
+package_file="mongodb-linux-x86_64-ubuntu1604-3.4.4.tgz"
 package_url="https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-3.4.4.tgz"
 
 # 检查安装包是否存在
