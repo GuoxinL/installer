@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongo.sh" afterPath="$PROJECT_DIR$/mongo.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo4j.sh" afterPath="$PROJECT_DIR$/neo4j.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -60,8 +59,8 @@
       <file leaf-file-name="service-utils.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="77" column="138" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="138" />
+            <state relative-caret-position="-137">
+              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -91,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/neo4j.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+              <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -726,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500536407132</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="test mongod and neo4j">
+      <created>1500537757467</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1500537757467</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1087,8 +1093,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="77" column="138" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="138" />
+        <state relative-caret-position="-137">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1096,7 +1102,7 @@
     <entry file="file://$PROJECT_DIR$/neo4j.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
           <folding />
         </state>
       </provider>

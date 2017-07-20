@@ -54,8 +54,10 @@ check_is_active_over neo4j
 
 sleep 3
 echo "set neo4j password."
-curl -H "Content-Type: application/json" -X POST -d '{"password":"111111"}' -u neo4j:neo4j "http://127.0.0.1:7474/user/neo4j/password"
-
+curl -X "POST" "http://127.0.0.1:7474/user/neo4j/password" \
+     -H "Content-Type: application/json" \
+     -u neo4j:neo4j \
+     -d $'{"password": "111111"}'
 if  [ $? -ne 0 ] ; then
     echo "neo4j set password success"
     exit 0
