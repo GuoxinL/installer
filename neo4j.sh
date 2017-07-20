@@ -48,7 +48,7 @@ tar -xf ${package_distory}${package_file} -C /soft/
 echo -e $neo4j_config >> /soft/${package_file%-*}/conf/neo4j.conf
 
 # 设置为服务
-set_application_as_service neo4j "$neo4j_application_conf"
+set_application_as_service neo4j "$neo4j_service_conf"
 
 # 检查是否安装成功
 check_is_active_over neo4j

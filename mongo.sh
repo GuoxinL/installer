@@ -55,7 +55,7 @@ mkdir /soft/${package_file%.*}/log
 create_mongod_config "#" ${package_file%.*}
 
 # 设置为服务
-set_application_as_service mongod "$mongodb_application_conf"
+set_application_as_service mongod "$mongodb_service_conf"
 
 # 检查运行状态
 check_is_active_over mongod
@@ -89,25 +89,3 @@ fi
 
 # 检查是否安装成功
 check_is_active_over mongod
-
-# Bolt connector
-dbms.connector.bolt.tls_level=OPTIONAL
-dbms.connector.bolt.listen_address=0.0.0.0:7687
-dbms.connector.http.listen_address=0.0.0.0:7474
-dbms.connector.https.listen_address=0.0.0.0:7473
-
-
-
-# Bolt connector
-dbms.connector.bolt.enabled=true
-#dbms.connector.bolt.tls_level=OPTIONAL
-#dbms.connector.bolt.listen_address=:7687
-
-# HTTP Connector. There must be exactly one HTTP connector.
-dbms.connector.http.enabled=true
-#dbms.connector.http.listen_address=:7474
-
-# HTTPS Connector. There can be zero or one HTTPS connectors.
-dbms.connector.https.enabled=true
-#dbms.connector.https.listen_address=:7473
-
