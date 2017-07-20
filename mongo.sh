@@ -88,12 +88,12 @@ check_package ${package_file} ${package_distory} ${package_url}
 tar -xf ${package_distory}${package_file} -C /soft/
 
 # 配置mongo
-mkdir /soft/${package_file%%.*}/conf
-mkdir /soft/${package_file%%.*}/db
-mkdir /soft/${package_file%%.*}/log
+mkdir /soft/${package_file%.*}/conf
+mkdir /soft/${package_file%.*}/db
+mkdir /soft/${package_file%.*}/log
 
 # 创建mongo配置文件
-create_mongod_config "#" ${package_file%%.*}
+create_mongod_config "#" ${package_file%.*}
 
 # 设置为服务
 set_application_as_service mongod "$application_conf"
@@ -104,9 +104,9 @@ if  [ $? -eq 1 ] ; then
     exit 1
 fi
 #导入配置文件
-/soft/${package_file%%.*}/bin/mongo localhost:27117 /tmp/create_user.js
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
 
-create_mongod_config "" ${package_file%%.*}
+create_mongod_config "" ${package_file%.*}
 
 systemctl restart mongod.service
 
@@ -116,7 +116,7 @@ if  [ $? -eq 1 ] ; then
     exit 1
 fi
 
-/soft/${package_file%%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
+/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
 
 if [[ $? -eq 0 ]]; then
     echo "Mongo login success."
