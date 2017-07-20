@@ -8,7 +8,6 @@
 
 ############################################################
 
-source utils/utils.sh
 source utils/service-utils.sh
 source utils/smelly_and_long.sh
 #${varible##*string} 从左向右截取最后一个string后的字符串
@@ -56,36 +55,36 @@ create_mongod_config "#" ${package_file%.*}
 
 # 设置为服务
 set_application_as_service mongod "$mongodb_service_conf"
-
-# 检查运行状态
-check_is_active_over mongod
-if  [ $? -eq 1 ] ; then
-    exit 1
-fi
-
-# 生成数据库配置文件
-genernate_mongo_user_conf_js
-
-##导入配置文件
-/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
-
-create_mongod_config "" ${package_file%.*}
-
-systemctl restart mongod.service
-
-# 检查运行状态
-check_is_active_over mongod
-if  [ $? -eq 1 ] ; then
-    exit 1
-fi
-
-/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
-
-if [[ $? -eq 0 ]]; then
-    echo "Mongo login success."
-else
-    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
-fi
-
-# 检查是否安装成功
-check_is_active_over mongod
+#
+## 检查运行状态
+#check_is_active_over mongod
+#if  [ $? -eq 1 ] ; then
+#    exit 1
+#fi
+#
+## 生成数据库配置文件
+#genernate_mongo_user_conf_js
+#
+###导入配置文件
+#/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
+#
+#create_mongod_config "" ${package_file%.*}
+#
+#systemctl restart mongod.service
+#
+## 检查运行状态
+#check_is_active_over mongod
+#if  [ $? -eq 1 ] ; then
+#    exit 1
+#fi
+#
+#/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
+#
+#if [[ $? -eq 0 ]]; then
+#    echo "Mongo login success."
+#else
+#    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
+#fi
+#
+## 检查是否安装成功
+#check_is_active_over mongod
