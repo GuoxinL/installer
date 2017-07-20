@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+############################################################
+
+#         name : Smelly and long
+
+#         author : liugx@bjnangle.com
+
+############################################################
+
 #
 #   MongoDB Configuration
 #

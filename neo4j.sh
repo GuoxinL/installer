@@ -8,7 +8,6 @@
 
 ############################################################
 
-source ./utils/utils.sh
 source ./utils/service-utils.sh
 source ./utils/smelly_and_long.sh
 #    $0：是脚本本身的名字；
