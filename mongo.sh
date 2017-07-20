@@ -52,7 +52,19 @@ function create_mongo_user_conf_js {
     })" > /tmp/create_user.js
 }
 # Application Config
-application_conf="[Unit]\nDescription=Neo4j Service\nAfter=network.target\n\n[Service]\nType=forking\nExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\nExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\nExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target"
+application_conf="[Unit]\n
+Description=Neo4j Service\n
+After=network.target\n
+\n
+[Service]\n
+Type=forking\n
+ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
+ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
+ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
+RestartSec=10\n
+\n
+[Install]\n
+WantedBy=multi-user.target"
 
 # 验证系统
 check_system
@@ -76,12 +88,12 @@ check_package ${package_file} ${package_distory} ${package_url}
 tar -xf ${package_distory}${package_file} -C /soft/
 
 # 配置mongo
-mkdir /soft/${package_distory%%.*}/conf
-mkdir /soft/${package_distory%%.*}/db
-mkdir /soft/${package_distory%%.*}/log
+mkdir /soft/${package_file%%.*}/conf
+mkdir /soft/${package_file%%.*}/db
+mkdir /soft/${package_file%%.*}/log
 
 # 创建mongo配置文件
-create_mongod_config "#" ${package_distory%%.*}
+create_mongod_config "#" ${package_file%%.*}
 
 # 设置为服务
 set_application_as_service mongod "$application_conf"
@@ -92,9 +104,9 @@ if  [ $? -eq 1 ] ; then
     exit 1
 fi
 #导入配置文件
-/soft/${package_distory%%.*}/bin/mongo localhost:27117 /tmp/create_user.js
+/soft/${package_file%%.*}/bin/mongo localhost:27117 /tmp/create_user.js
 
-create_mongod_config "" ${package_distory%%.*}
+create_mongod_config "" ${package_file%%.*}
 
 systemctl restart mongod.service
 
@@ -104,7 +116,7 @@ if  [ $? -eq 1 ] ; then
     exit 1
 fi
 
-/soft/${package_distory%%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
+/soft/${package_file%%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
 
 if [[ $? -eq 0 ]]; then
     echo "Mongo login success."
