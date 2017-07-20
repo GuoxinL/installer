@@ -23,7 +23,7 @@ function create_mongod_config {
 
 function genernate_mongo_user_conf_js {
     echo -e "
-conn=new Mongo()
+conn=new Mongo('localhost:27117')
 db = conn.getDB('admin')
 db.createUser({
     user: 'admin',
