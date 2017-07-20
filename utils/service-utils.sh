@@ -75,3 +75,7 @@ function set_application_as_service {
     systemctl enable ${application_name}.service
     systemctl start  ${application_name}.service
 }
+
+function set_neo4j_password{
+    curl -H "Content-Type: application/json" -X POST -d '{"password":"111111"}' -u neo4j:neo4j "http://127.0.0.1:7474/user/neo4j/password"
+}

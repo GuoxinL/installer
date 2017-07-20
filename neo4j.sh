@@ -60,4 +60,4 @@ if  [ $? -ne 0 ] ; then
     echo "neo4j set password success"
     exit 0
 fi
-echo `curl -H "Content-Type: application/json" -X POST -d '{"password":"111111"}' -u neo4j:neo4j "http://127.0.0.1:7474/user/neo4j/password"`
+set_neo4j_password
