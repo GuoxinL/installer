@@ -36,7 +36,7 @@ function create_mongod_config {
     $1   authorization: enabled" > /soft/$2/conf/mongod.conf
 }
 
-function create_mongo_user_conf_js {
+function genernate_mongo_user_conf_js {
     echo -e "
     use admin
     db.createUser({
@@ -103,6 +103,10 @@ check_is_active_over mongod
 if  [ $? -eq 1 ] ; then
     exit 1
 fi
+
+# 生成数据库配置文件
+genernate_mongo_user_conf_js
+
 #导入配置文件
 /soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
 

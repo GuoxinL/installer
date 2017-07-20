@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="test mongod and neo4j">
+    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongo.sh" afterPath="$PROJECT_DIR$/mongo.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.sh" afterPath="$PROJECT_DIR$/test.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="mongo.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mongo.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="92" column="34" lean-forward="true" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+            <state relative-caret-position="522">
+              <caret line="107" column="28" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -60,8 +59,8 @@
       <file leaf-file-name="service-utils.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+            <state relative-caret-position="18">
+              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -119,9 +118,12 @@
       <find>application_conf</find>
       <find>\n</find>
       <find>package_distory</find>
+      <find>${package_file%%.*}</find>
+      <find>install success</find>
     </findStrings>
     <replaceStrings>
       <replace>=</replace>
+      <replace>${package_file%.*}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -525,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500515289023</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="test mongod and neo4j">
+      <created>1500515661259</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1500515661259</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -834,14 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -858,10 +859,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mongo.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="92" column="34" lean-forward="true" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+        <state relative-caret-position="522">
+          <caret line="107" column="28" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="28" />
           <folding />
         </state>
       </provider>
