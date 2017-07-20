@@ -18,7 +18,7 @@ source utils/service-utils.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
-    echo -e "processManagement:\n\tfork: true\nnet:\n\tbindIp: 0.0.0.0\n\tport: 27117\nstorage:\n\tdbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\nsystemLog:\n\tdestination: file\n\tpath: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n\tlogAppend: true\nstorage:\n\tjournal:\n\tenabled: true\n$1security:\n\t$1authorization: enabled" > /soft/$2/conf/mongod.conf
+    echo -e "processManagement:\n    fork: true\nnet:\n    bindIp: 0.0.0.0\n    port: 27117\nstorage:\n    dbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\nsystemLog:\n    destination: file\n    path: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n    logAppend: true\nstorage:\n    journal:\n    enabled: true\n$1security:\n    $1authorization: enabled" > /soft/$2/conf/mongod.conf
 }
 
 function genernate_mongo_user_conf_js {
