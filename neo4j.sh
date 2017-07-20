@@ -45,8 +45,8 @@ if  [ $? -eq 0 ] ; then
 fi
 
 # 定义安装包相关信息
-package_file="./package/"
-package_distory="neo4j-community-3.2.1-unix.tar.gz"
+package_distory="./package/"
+package_file="neo4j-community-3.2.1-unix.tar.gz"
 package_url="https://neo4j.com/artifact.php?name=neo4j-community-3.2.1-unix.tar.gz"
 
 # 检查安装包是否存在
