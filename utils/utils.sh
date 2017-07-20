@@ -16,12 +16,26 @@
 #    126表示不是可执行的（Not an executable）
 #    >=128 信号产生
 
-sys_version=`cat /etc/issue`
+function check_system {
+    sys_version=`cat /etc/issue`
 
-if [[ $sys_version =~ 'Ubuntu' ]]
-then
-    echo "System verification success!!"
-else
-    echo "Use Ubuntu 16.04.2 LTS to run this Shell Script!"
-    exit 2
-fi
+    if [[ $sys_version =~ 'Ubuntu' ]]
+    then
+        echo "System verification success!!"
+    else
+        echo "Use Ubuntu 16.04.2 LTS to run this Shell Script!"
+        exit 2
+    fi
+}
+
+#*    0 的为"真"( true )
+#* 非 1 的为"假"( false )
+function check_is_active {
+    is_active=`systemctl is-active $1.service`
+
+    if [[ $is_active == active ]]; then
+        return 0
+    else
+        return 1
+    fi
+}

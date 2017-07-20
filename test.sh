@@ -6,3 +6,7 @@ echo ${varible%%.*}
 
 varible2="12345${varible%%.*}67890qwertyuiopasdfghjklzxcvbnm"
 echo $varible2
+
+source utils/utils.sh
+
+check_system

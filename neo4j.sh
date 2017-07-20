@@ -8,8 +8,8 @@
 
 ############################################################
 
-
-source ./depend/verification-system.sh
+source utils/utils.sh
+source utils/service-utils.sh
 
 #    $0：是脚本本身的名字；
 #    $n: 方法参数传参
@@ -19,63 +19,44 @@ source ./depend/verification-system.sh
 #    $$：是脚本运行的当前进程ID号；
 #    $?：是显示最后命令的退出状态，0表示没有错误，其他表示有错误；
 
-# check neo4j-community-3.2.1-unix.tar.gz exists
-function check_package {
-    file_exists=`find . -name ${neo4j_path}`
 
-    if [[ -e $file_exists ]]; then
-        echo "File already exist, You don't need to download it"
-    else
-        if [[ ! -e $package_path ]]; then
-           mkdir package
-        fi
-        echo "Downloading..."
-        wget https://neo4j.com/artifact.php?name=neo4j-community-3.2.1-unix.tar.gz -O ${final_path}
-        echo $?
-        if [ 0 -eq $? ]; then
-            echo "Download successfully!"
-        else
-            echo "Download faiil!"
-        fi
-    fi
-}
-
-# Set Neo4j as a service
-function set_neo4j_as_service {
-    # > 覆盖
-    # >> 追加
-    echo -e "[Unit]\n
+# Application Config
+application_conf="[Unit]\n
     Description=Neo4j Service\n
     After=network.target\n
     \n
     [Service]\n
     Type=forking\n
-    ExecStart=/soft/$1/bin/neo4j start\n
-    ExecReload=/soft/$1/bin/neo4j restart\n
-    ExecStop=/soft/$1/bin/neo4j stop\n
+    ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
+    ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
+    ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
     RestartSec=10\n
     \n
     [Install]\n
-    WantedBy=multi-user.target" > /etc/systemd/system/neo4j.service
+    WantedBy=multi-user.target"
+# 验证系统
+check_system
 
-    systemctl daemon-reload
-    systemctl enable neo4j.service
-    systemctl start neo4j.service
-}
-
-package_path="./package/"
-neo4j_path="neo4j-community-3.2.1-unix.tar.gz"
-final_path=${package_path}${neo4j_path}
-
-check_package ${neo4j_path}
-
-tar -xf ${final_path} -C /soft/
-
-set_neo4j_as_service
-
-is_active=`systemctl is-active opensips.service`
-if [[ $is_active != active ]]; then
-    echo "Neo4j install failure, Please use 'systemctl status neo4j.service'"
-else
-    echo "Neo4j install success"
+# 验证neo4j是否运行
+check_is_active neo4j
+if  [ $? -eq 0 ] ; then
+    echo "neo4j runing, don't need install"
+    exit 0
 fi
+
+# 定义安装包相关信息
+package_file="./package/"
+package_distory="neo4j-community-3.2.1-unix.tar.gz"
+package_url="https://neo4j.com/artifact.php?name=neo4j-community-3.2.1-unix.tar.gz"
+
+# 检查安装包是否存在
+check_package ${package_file} ${package_distory} ${package_url}
+
+# 解压
+tar -xf ${package_file}${package_distory} -C /soft/
+
+# 设置为服务
+set_application_as_service neo4j ${application_conf}
+
+# 检查是否安装成功
+exit `check_is_active_over neo4j`
