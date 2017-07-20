@@ -19,8 +19,8 @@
       <file leaf-file-name="java.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="453">
+              <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -29,8 +29,8 @@
       <file leaf-file-name="mongo.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongo.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="462">
+              <caret line="89" column="27" lean-forward="true" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -89,8 +89,8 @@
       <file leaf-file-name="neo4j.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neo4j.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+            <state relative-caret-position="498">
+              <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -133,8 +133,8 @@
       <find>echo</find>
       <find>check_system</find>
       <find>check_is_active</find>
-      <find>application_conf</find>
       <find>utils/service-utils.sh</find>
+      <find>application_conf</find>
     </findStrings>
     <replaceStrings>
       <replace>=</replace>
@@ -739,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500538533202</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="test mongod and neo4j">
+      <created>1500539145660</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1500539145660</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1042,14 +1049,6 @@
     <entry file="file://$PROJECT_DIR$/java8.py" />
     <entry file="file://$PROJECT_DIR$/java.py" />
     <entry file="file://$PROJECT_DIR$/system-init.py" />
-    <entry file="file://$PROJECT_DIR$/java.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system-init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1090,14 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mongo.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-137">
@@ -1106,10 +1097,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/java.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="89" column="27" lean-forward="true" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neo4j.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        <state relative-caret-position="498">
+          <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
           <folding />
         </state>
       </provider>

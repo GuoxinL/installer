@@ -60,8 +60,9 @@ echo "set neo4j password."
 #     -H "Content-Type: application/json" \
 #     -u neo4j:neo4j \
 #     -d $'{"password": "111111"}'
-# 用这个命令替代 需要安装 apt install httpie
-http -a neo4j:neo4j POST http://localhost:7474/user/neo4j/password password=foobar
+# 用这个命令替代 需要安装
+apt install httpie -y
+http -a neo4j:neo4j POST http://127.0.0.1:7474/user/neo4j/password password=foobar
 if  [ $? -ne 0 ] ; then
     echo "neo4j set password success"
     exit 0
