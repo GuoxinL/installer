@@ -53,7 +53,7 @@ package_url="https://neo4j.com/artifact.php?name=neo4j-community-3.2.1-unix.tar.
 check_package ${package_file} ${package_distory} ${package_url}
 
 # 解压
-tar -xf ${package_file}${package_distory} -C /soft/
+tar -xf ${package_distory}${package_file} -C /soft/
 
 # 设置为服务
 set_application_as_service neo4j ${application_conf}
