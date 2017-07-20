@@ -38,14 +38,12 @@ db.createUser({
 }
 # Application Config
 application_conf="[Unit]\n
-Description=Neo4j Service\n
+Description=MongoDB Service\n
 After=network.target\n
 \n
 [Service]\n
 Type=forking\n
-ExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\n
-ExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\n
-ExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\n
+ExecStart=/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongod --config /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/conf/mongod.conf\n
 RestartSec=10\n
 \n
 [Install]\n
