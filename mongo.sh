@@ -18,38 +18,23 @@ source utils/service-utils.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
-    echo -e "processManagement:\n
-       fork: true\n
-    net:\n
-       bindIp: 0.0.0.0\n
-       port: 27117\n
-    storage:\n
-       dbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\n
-    systemLog:\n
-       destination: file\n
-       path: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n
-       logAppend: true\n
-    storage:\n
-       journal:\n
-          enabled: true\n
-    $1security:\n
-    $1   authorization: enabled" > /soft/$2/conf/mongod.conf
+    echo -e "processManagement:\n\tfork: true\nnet:\n\tbindIp: 0.0.0.0\n\tport: 27117\nstorage:\n\tdbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\nsystemLog:\n\tdestination: file\n\tpath: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n\tlogAppend: true\nstorage:\n\tjournal:\n\tenabled: true\n$1security:\n\t$1authorization: enabled" > /soft/$2/conf/mongod.conf
 }
 
 function genernate_mongo_user_conf_js {
     echo -e "
-    use admin
-    db.createUser({
-        user: \"admin\",
-        pwd: \"admin\",
-        roles: [ { role: \"userAdminAnyDatabase\", db: \"admin\" } ]
-    })
-    use birdnest
-    db.createUser({
-        user: \"yjh\",
-        pwd: \"yjh123456790\",
-        roles: [ { role: \"readWrite\", db: \"birdnest\" } ]
-    })" > /tmp/create_user.js
+use admin
+db.createUser({
+    user: \"admin\",
+    pwd: \"admin\",
+    roles: [ { role: \"userAdminAnyDatabase\", db: \"admin\" } ]
+})
+use birdnest
+db.createUser({
+    user: \"yjh\",
+    pwd: \"yjh123456790\",
+    roles: [ { role: \"readWrite\", db: \"birdnest\" } ]
+})" > /tmp/create_user.js
 }
 # Application Config
 application_conf="[Unit]\n
@@ -108,6 +93,7 @@ fi
 genernate_mongo_user_conf_js
 
 ##导入配置文件
+/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo
 #/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
 #
 #create_mongod_config "" ${package_file%.*}
