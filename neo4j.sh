@@ -8,9 +8,9 @@
 
 ############################################################
 
-source utils/utils.sh
-source utils/service-utils.sh
-source utils/smelly_and_long.sh
+source ./utils/utils.sh
+source ./utils/service-utils.sh
+source ./utils/smelly_and_long.sh
 #    $0：是脚本本身的名字；
 #    $n: 方法参数传参
 #    $#：是传给脚本的参数个数；
