@@ -25,7 +25,7 @@ source ./utils/smelly_and_long.sh
 # 验证系统
 check_system
 
-# 验证neo4j是否运行
+# 验证 neo4j 是否运行
 check_is_active neo4j
 if  [ $? -eq 0 ] ; then
     echo "neo4j runing, don't need install"

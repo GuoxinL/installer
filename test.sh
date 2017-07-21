@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-package_file="mongodb-linux-x86_64-ubuntu1604-3.4.4.tgz"
-echo ${package_file%%.*}
+package_file="mongodb-linux-x86_64-ubuntu1604-3.4.4.tar.gz"
+echo ${package_file%%.tar.gz*}
 
 echo ${package_file%-*}
 
