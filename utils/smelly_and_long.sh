@@ -17,20 +17,8 @@ mongodb_config_append="security:\n    authorization: enabled"
 #
 #   MongoDB create user script
 #
-mongodb_config_create_user_admin="conn = new Mongo('localhost:27117')\n
-db = conn.getDB('admin')\n
-db.createUser({\n
-    user: 'admin',\n
-    pwd: 'admin',\n
-    roles : [ 'root' ]\n
-})"
-mongodb_config_create_user_birdnest="conn = new Mongo('localhost:27117')\n
-db = conn.getDB('birdnest')\n
-db.createUser({\n
-    user: 'yjh',\n
-    pwd: 'yjh123456790',\n
-    roles : [ 'readWrite' ]\n
-})"
+mongodb_config_create_user_admin="conn = new Mongo('localhost:27117')\ndb = conn.getDB('admin')\ndb.createUser({\n    user: 'admin',\n    pwd: 'admin',\n    roles : [ 'root' ]\n})"
+mongodb_config_create_user_birdnest="conn = new Mongo('localhost:27117')\ndb = conn.getDB('birdnest')\ndb.createUser({\n    user: 'yjh',\n    pwd: 'yjh123456790',\n    roles : [ 'readWrite' ]\n})"
 #
 #   MongoDB Service config
 #

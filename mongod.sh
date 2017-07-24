@@ -24,8 +24,8 @@ function append_mongod_config {
     echo -e "${mongodb_config_append}" >> /soft/$1/conf/mongod.conf
 }
 function genernate_mongo_user_conf_js {
-    echo -e $mongodb_config_create_user_admin > /tmp/create_user_admin.js
-    echo -e $mongodb_config_create_user_birdnest > /tmp/create_user_birdnest.js
+    echo -e "$mongodb_config_create_user_admin" > /tmp/create_user_admin.js
+    echo -e "$mongodb_config_create_user_birdnest" > /tmp/create_user_birdnest.js
 }
 
 # 验证系统
@@ -68,25 +68,24 @@ fi
 
 # 生成数据库配置文件
 genernate_mongo_user_conf_js
-#
-###导入配置文件
-#/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_admin.js
-#if  [ $? -ne 0 ] ; then
-#    echo "Create user admin fail!!!"
-#    exit 1
-#fi
-#/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_birdnest.js
-#if  [ $? -ne 0 ] ; then
-#    echo "Create user birdnest fail!!!"
-#    exit 1
-#fi
-#/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
-##/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo localhost:27117 /tmp/create_user.js
-#
-#append_mongod_config ${package_file%.*}
-#
-#systemctl restart mongod.service
-#
+
+##导入配置文件
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_admin.js
+if  [ $? -ne 0 ] ; then
+    echo "Create user admin fail!!!"
+    exit 1
+fi
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_birdnest.js
+if  [ $? -ne 0 ] ; then
+    echo "Create user birdnest fail!!!"
+    exit 1
+fi
+#/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo localhost:27117 /tmp/create_user.js
+
+append_mongod_config ${package_file%.*}
+
+systemctl restart mongod.service
+
 ## 检查运行状态
 #check_is_active_over mongod
 #if  [ $? -eq 1 ] ; then
