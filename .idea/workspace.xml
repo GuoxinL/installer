@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongod.sh" afterPath="$PROJECT_DIR$/mongod.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/smelly_and_long.sh" afterPath="$PROJECT_DIR$/utils/smelly_and_long.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongod.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mongod.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongod.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+            <state relative-caret-position="363">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smelly_and_long.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="smelly_and_long.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="241">
+              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -77,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>neo4j_path</find>
       <find>check_is_active_over</find>
       <find>package_url</find>
       <find>conf</find>
@@ -106,6 +105,7 @@
       <find>create_mongod_config</find>
       <find>check_package</find>
       <find>genernate_mongod_config</find>
+      <find>\t</find>
       <find />
     </findStrings>
     <replaceStrings>
@@ -141,8 +141,8 @@
         <option value="$PROJECT_DIR$/java.sh" />
         <option value="$PROJECT_DIR$/java-tar-gz.sh" />
         <option value="$PROJECT_DIR$/test.sh" />
-        <option value="$PROJECT_DIR$/utils/smelly_and_long.sh" />
         <option value="$PROJECT_DIR$/mongod.sh" />
+        <option value="$PROJECT_DIR$/utils/smelly_and_long.sh" />
       </list>
     </option>
   </component>
@@ -381,13 +381,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500272541739</updated>
-    </task>
-    <task id="LOCAL-00021" summary="test mongod and neo4j">
-      <created>1500515661259</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1500515661259</updated>
     </task>
     <task id="LOCAL-00022" summary="test mongod and neo4j">
       <created>1500516035653</created>
@@ -725,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500874684334</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="delete --eval">
+      <created>1500874867904</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1500874867904</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1118,18 +1118,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
+    <entry file="file://$PROJECT_DIR$/mongod.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="363">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mongod.sh">
+    <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+        <state relative-caret-position="241">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding />
         </state>
       </provider>
