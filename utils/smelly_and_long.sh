@@ -44,7 +44,7 @@ neo4j_config="dbms.connector.bolt.tls_level=OPTIONAL\ndbms.connector.bolt.listen
 #
 #   Neo4j Service config
 #
-neo4j_service_conf="[Unit]\nDescription=Neo4j Service\nAfter=network.target\\n[Service]\nType=forking\nExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\nExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\nExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target"
+neo4j_service_conf="[Unit]\nDescription=Neo4j Service\nAfter=network.target\n[Service]\nType=forking\nExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\nExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\nExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target"
 
 #
 #   Redis Configuration
