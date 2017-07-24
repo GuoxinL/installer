@@ -26,7 +26,7 @@ db.createUser({\n
         db: 'admin'\n
     }]\n
 })\n
-db = conn.getSiblingDB('birdnest')\n
+db = conn.getDB('birdnest')\n
 db.createUser({\n
     user: 'yjh',\n
     pwd: 'yjh123456790',\n
