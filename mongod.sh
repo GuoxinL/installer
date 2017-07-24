@@ -17,7 +17,7 @@ source utils/smelly_and_long.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
-    echo -e $mongodb_config > /soft/$2/conf/mongod.conf
+    echo -e "$mongodb_config" > /soft/$2/conf/mongod.conf
 }
 
 function genernate_mongo_user_conf_js {
@@ -77,14 +77,14 @@ check_is_active_over mongod
 if  [ $? -eq 1 ] ; then
     exit 1
 fi
-
-/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
-
-if [[ $? -eq 0 ]]; then
-    echo "Mongo login success."
-else
-    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
-fi
+#
+#/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
+#
+#if [[ $? -eq 0 ]]; then
+#    echo "Mongo login success."
+#else
+#    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
+#fi
 
 # 检查是否安装成功
 check_is_active_over mongod

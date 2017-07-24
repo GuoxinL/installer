@@ -13,7 +13,7 @@ source ./utils/smelly_and_long.sh
 
 function genernate_opensips_config {
     echo -e $opensips_cursee_out > /tmp/cursee.out
-    echo -e $opensips_makefile_config > /tmp/Makefile.conf
+    echo -e $opensips_makefile_conf > /tmp/Makefile.conf
 }
 # 验证系统
 check_system
