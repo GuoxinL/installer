@@ -21,19 +21,13 @@ db = conn.getDB('admin')\n
 db.createUser({\n
     user: 'admin',\n
     pwd: 'admin',\n
-    roles: [{\n
-        role: 'userAdminAnyDatabase',\n
-        db: 'admin'\n
-    }]\n
+    roles : [ 'root' ]\n
 })\n
 db = conn.getDB('birdnest')\n
 db.createUser({\n
     user: 'yjh',\n
     pwd: 'yjh123456790',\n
-    roles: [{\n
-        role: 'readWrite',\n
-        db: 'birdnest'\n
-    }]\n
+    roles : [ 'readWrite' ]\n
 })"
 
 #
