@@ -15,10 +15,20 @@ mongodb_config="processManagement:\n    fork: true\nnet:\n    bindIp: 0.0.0.0\n 
 mongodb_config_append="security:\n    authorization: enabled"
 
 #
-#   MongoDB create user script
+#   MongoDB create user admin script
 #
 mongodb_config_create_user_admin="conn = new Mongo('localhost:27117')\ndb = conn.getDB('admin')\ndb.createUser({\n    user: 'admin',\n    pwd: 'admin',\n    roles : [ 'root' ]\n})"
+
+#
+#   MongoDB create user birdnest script
+#
 mongodb_config_create_user_birdnest="conn = new Mongo('localhost:27117')\ndb = conn.getDB('birdnest')\ndb.createUser({\n    user: 'yjh',\n    pwd: 'yjh123456790',\n    roles : [ 'readWrite' ]\n})"
+
+#
+#   MongoDB check user login script
+#
+mongodb_check_user_birdnest_login="conn = new Mongo('localhost:27117')\ndb = conn.getDB('birdnest')\ndb.auth('yjh','yjh123456790')"
+
 #
 #   MongoDB Service config
 #

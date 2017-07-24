@@ -23,9 +23,14 @@ function create_mongod_config {
 function append_mongod_config {
     echo -e "${mongodb_config_append}" >> /soft/$1/conf/mongod.conf
 }
+
+function append_mongod_config {
+    echo -e  >> /soft/$1/conf/mongod.conf
+}
 function genernate_mongo_user_conf_js {
     echo -e "$mongodb_config_create_user_admin" > /tmp/create_user_admin.js
     echo -e "$mongodb_config_create_user_birdnest" > /tmp/create_user_birdnest.js
+    echo -e "${mongodb_check_user_birdnest_login}" > /tmp/check_user_birdnest_login.js
 }
 
 # 验证系统
@@ -86,19 +91,17 @@ append_mongod_config ${package_file%.*}
 
 systemctl restart mongod.service
 
-## 检查运行状态
-#check_is_active_over mongod
-#if  [ $? -eq 1 ] ; then
-#    exit 1
-#fi
-##
-##/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
-##
-##if [[ $? -eq 0 ]]; then
-##    echo "Mongo login success."
-##else
-##    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
-##fi
+# 验证登录
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/check_user_birdnest_login.js
+echo $?
+# TODO 如果使用如下命令对mongodb进行验证存在一定问题暂时无法解决
+# /soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
 #
-## 检查是否安装成功
-#check_is_active_over mongod
+#if [[ $? -eq 0 ]]; then
+#    echo "Mongo login success."
+#else
+#    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
+#fi
+
+# 检查是否安装成功
+check_is_active_over mongod
