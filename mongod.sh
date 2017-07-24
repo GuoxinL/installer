@@ -21,7 +21,8 @@ function create_mongod_config {
 }
 
 function genernate_mongo_user_conf_js {
-    echo -e $mongodb_config_create_user_js > /tmp/create_user.js
+    echo -e $mongodb_config_create_user_admin > /tmp/create_user_admin.js
+    echo -e $mongodb_config_create_user_birdnest > /tmp/create_user_birdnest.js
 }
 
 # 验证系统
@@ -66,9 +67,14 @@ fi
 genernate_mongo_user_conf_js
 
 ##导入配置文件
-/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_admin.js
 if  [ $? -ne 0 ] ; then
-    echo "Import config fail!!!"
+    echo "Create user admin fail!!!"
+    exit 1
+fi
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_birdnest.js
+if  [ $? -ne 0 ] ; then
+    echo "Create user birdnest fail!!!"
     exit 1
 fi
 #/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js

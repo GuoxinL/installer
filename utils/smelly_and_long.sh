@@ -16,20 +16,20 @@ mongodb_config="processManagement:\n    fork: true\nnet:\n    bindIp: 0.0.0.0\n 
 #
 #   MongoDB create user script
 #
-mongodb_config_create_user_js="conn = new Mongo('localhost:27117')\n
+mongodb_config_create_user_admin="conn = new Mongo('localhost:27117')\n
 db = conn.getDB('admin')\n
 db.createUser({\n
     user: 'admin',\n
     pwd: 'admin',\n
     roles : [ 'root' ]\n
-})\n
+})"
+mongodb_config_create_user_birdnest="conn = new Mongo('localhost:27117')\n
 db = conn.getDB('birdnest')\n
 db.createUser({\n
     user: 'yjh',\n
     pwd: 'yjh123456790',\n
     roles : [ 'readWrite' ]\n
 })"
-
 #
 #   MongoDB Service config
 #
