@@ -17,6 +17,8 @@ source utils/smelly_and_long.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
+    echo $1
+    echo $2
     echo -e "$1" > /soft/$2/conf/mongod.conf
 }
 
@@ -52,7 +54,7 @@ mkdir /soft/${package_file%.*}/db
 mkdir /soft/${package_file%.*}/log
 
 # 创建mongo配置文件
-create_mongod_config "#" ${package_file%.*}
+create_mongod_config \# ${package_file%.*}
 
 # 设置为服务
 set_application_as_service mongod "$mongodb_service_conf"
