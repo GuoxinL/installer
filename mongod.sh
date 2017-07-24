@@ -67,7 +67,12 @@ genernate_mongo_user_conf_js
 
 ##导入配置文件
 /soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
+if  [ $? -ne 0 ] ; then
+    echo "Import config fail!!!"
+    exit 1
+fi
 #/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
+#/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo localhost:27117 /tmp/create_user.js
 #
 #create_mongod_config "" ${package_file%.*}
 #

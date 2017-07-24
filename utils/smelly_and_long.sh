@@ -16,24 +16,24 @@ mongodb_config="processManagement:\n    fork: true\nnet:\n    bindIp: 0.0.0.0\n 
 #
 #   MongoDB create user script
 #
-mongodb_config_create_user_js="conn = new Mongo('localhost:27117')
-db = conn.getDB('admin')
-db.createUser({
-    user: 'admin',
-    pwd: 'admin',
-    roles: [{
-        role: 'userAdminAnyDatabase',
-        db: 'admin'
-    }]
-})
-db = conn.getSiblingDB('birdnest')
-db.createUser({
-    user: 'yjh',
-    pwd: 'yjh123456790',
-    roles: [{
-        role: 'readWrite',
-        db: 'birdnest'
-    }]
+mongodb_config_create_user_js="conn = new Mongo('localhost:27117')\n
+db = conn.getDB('admin')\n
+db.createUser({\n
+    user: 'admin',\n
+    pwd: 'admin',\n
+    roles: [{\n
+        role: 'userAdminAnyDatabase',\n
+        db: 'admin'\n
+    }]\n
+})\n
+db = conn.getSiblingDB('birdnest')\n
+db.createUser({\n
+    user: 'yjh',\n
+    pwd: 'yjh123456790',\n
+    roles: [{\n
+        role: 'readWrite',\n
+        db: 'birdnest'\n
+    }]\n
 })"
 
 #
