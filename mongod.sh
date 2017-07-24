@@ -66,7 +66,8 @@ fi
 genernate_mongo_user_conf_js
 
 ##导入配置文件
-/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
+#/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
 
 create_mongod_config "" ${package_file%.*}
 
