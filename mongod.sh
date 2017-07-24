@@ -68,38 +68,38 @@ fi
 
 # 生成数据库配置文件
 genernate_mongo_user_conf_js
-
-##导入配置文件
-/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_admin.js
-if  [ $? -ne 0 ] ; then
-    echo "Create user admin fail!!!"
-    exit 1
-fi
-/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_birdnest.js
-if  [ $? -ne 0 ] ; then
-    echo "Create user birdnest fail!!!"
-    exit 1
-fi
-/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
-#/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo localhost:27117 /tmp/create_user.js
-
-append_mongod_config ${package_file%.*}
-
-systemctl restart mongod.service
-
-# 检查运行状态
-check_is_active_over mongod
-if  [ $? -eq 1 ] ; then
-    exit 1
-fi
 #
-#/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
-#
-#if [[ $? -eq 0 ]]; then
-#    echo "Mongo login success."
-#else
-#    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
+###导入配置文件
+#/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_admin.js
+#if  [ $? -ne 0 ] ; then
+#    echo "Create user admin fail!!!"
+#    exit 1
 #fi
-
-# 检查是否安装成功
-check_is_active_over mongod
+#/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user_birdnest.js
+#if  [ $? -ne 0 ] ; then
+#    echo "Create user birdnest fail!!!"
+#    exit 1
+#fi
+#/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
+##/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo localhost:27117 /tmp/create_user.js
+#
+#append_mongod_config ${package_file%.*}
+#
+#systemctl restart mongod.service
+#
+## 检查运行状态
+#check_is_active_over mongod
+#if  [ $? -eq 1 ] ; then
+#    exit 1
+#fi
+##
+##/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
+##
+##if [[ $? -eq 0 ]]; then
+##    echo "Mongo login success."
+##else
+##    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
+##fi
+#
+## 检查是否安装成功
+#check_is_active_over mongod
