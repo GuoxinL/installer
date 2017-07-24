@@ -93,7 +93,11 @@ systemctl restart mongod.service
 
 # 验证登录
 /soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/check_user_birdnest_login.js
-echo $?
+if  [ $? -ne 0 ] ; then
+    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
+    exit 1
+fi
+echo "Mongo login success."
 # TODO 如果使用如下命令对mongodb进行验证存在一定问题暂时无法解决
 # /soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
 #
