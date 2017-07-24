@@ -11,27 +11,12 @@
 #
 #   MongoDB Configuration
 #
-mongodb_config="
-processManagement:\n
-    fork: true\n
-net:\n
-    bindIp: 0.0.0.0\n
-    port: 27117\n
-storage:\n
-    dbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\n
-    journal: \n
-        enabled: true\n
-systemLog:\n
-    destination: file\n
-    path: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n
-    logAppend: true\n
-$1security:\n
-    $1authorization: enabled"
+mongodb_config="processManagement:\n    fork: true\nnet:\n    bindIp: 0.0.0.0\n    port: 27117\nstorage:\n    dbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\n    journal: \n        enabled: true\nsystemLog:\n    destination: file\n    path: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n    logAppend: true\n$1security:\n    $1authorization: enabled"
 
 #
 #   MongoDB create user script
 #
-mongodb_config_create_user_js="conn = new Mongo('localhost:27117')\ndb = conn.getDB('admin')\ndb.createUser({\n    user: 'admin',\n    pwd: 'admin',\n    roles: [{\n        role: 'userAdminAnyDatabase',\n        db: 'admin'\n    }]\n})\ndb = db.getSiblingDB('birdnest')\ndb.createUser({\n    user: 'yjh',\n    pwd: 'yjh123456790',\n    roles: [{\n        role: 'readWrite',\n        db: 'birdnest'\n    }]\n})"
+mongodb_config_create_user_js="conn = new Mongo('localhost:27117');\ndb = conn.getDB('admin');\ndb.createUser({\n    user: 'admin',\n    pwd: 'admin',\n    roles: [{\n        role: 'userAdminAnyDatabase',\n        db: 'admin'\n    }]\n});\ndb = db.getSiblingDB('birdnest');\ndb.createUser({\n    user: 'yjh',\n    pwd: 'yjh123456790',\n    roles: [{\n        role: 'readWrite',\n        db: 'birdnest'\n    }]\n});"
 
 #
 #   MongoDB Service config
