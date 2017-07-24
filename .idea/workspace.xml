@@ -4,6 +4,7 @@
     <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongod.sh" afterPath="$PROJECT_DIR$/mongod.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/smelly_and_long.sh" afterPath="$PROJECT_DIR$/utils/smelly_and_long.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongod.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mongod.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongod.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="71" column="4" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+            <state relative-caret-position="306">
+              <caret line="26" column="73" lean-forward="true" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smelly_and_long.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="smelly_and_long.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="93">
+              <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -77,11 +78,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>neo4j-community-3.2.1</find>
       <find>is_active</find>
       <find>neo4j_path</find>
       <find>check_is_active_over</find>
-      <find>check_package</find>
       <find>package_url</find>
       <find>conf</find>
       <find>$1</find>
@@ -107,6 +106,8 @@
       <find>\n</find>
       <find>create_user</find>
       <find>create_mongod_config</find>
+      <find>check_package</find>
+      <find>genernate_mongod_config</find>
     </findStrings>
     <replaceStrings>
       <replace>=</replace>
@@ -140,17 +141,16 @@
         <option value="$PROJECT_DIR$/opensips.sh" />
         <option value="$PROJECT_DIR$/java.sh" />
         <option value="$PROJECT_DIR$/java-tar-gz.sh" />
-        <option value="$PROJECT_DIR$/utils/smelly_and_long.sh" />
         <option value="$PROJECT_DIR$/test.sh" />
+        <option value="$PROJECT_DIR$/utils/smelly_and_long.sh" />
         <option value="$PROJECT_DIR$/mongod.sh" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="799" />
-    <option name="y" value="221" />
-    <option name="width" value="931" />
-    <option name="height" value="859" />
+    <option name="y" value="-6" />
+    <option name="width" value="1920" />
+    <option name="height" value="1086" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -226,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Bash.test.sh">
+  <component name="RunManager" selected="Bash.mongod.sh">
     <configuration default="false" name="test.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
@@ -244,6 +244,17 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neo4j.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="installer" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="mongod.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mongod.sh" />
       <option name="PARAMETERS" value="" />
       <module name="installer" />
       <envs />
@@ -338,15 +349,17 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Bash.verification-system.sh" />
       <item index="1" class="java.lang.String" itemvalue="Bash.test.sh" />
       <item index="2" class="java.lang.String" itemvalue="Bash.neo4j.sh" />
+      <item index="3" class="java.lang.String" itemvalue="Bash.mongod.sh" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Bash.test.sh" />
-        <item index="1" class="java.lang.String" itemvalue="Bash.neo4j.sh" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Bash.mongod.sh" />
+        <item index="1" class="java.lang.String" itemvalue="Bash.test.sh" />
+        <item index="2" class="java.lang.String" itemvalue="Bash.neo4j.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -369,13 +382,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500272541739</updated>
-    </task>
-    <task id="LOCAL-00017" summary="test mongod and neo4j">
-      <created>1500514815368</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1500514815368</updated>
     </task>
     <task id="LOCAL-00018" summary="test mongod and neo4j">
       <created>1500514881342</created>
@@ -713,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500873682932</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="delete --eval">
+      <created>1500873813187</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1500873813187</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -726,18 +739,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="799" y="221" width="931" height="859" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="-6" width="1920" height="1086" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32152587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24557753" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31880108" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23397075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11075612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1050,14 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-tar-gz.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1090,14 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1114,10 +1110,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/neo4j.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mongod.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="71" column="4" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+        <state relative-caret-position="306">
+          <caret line="26" column="73" lean-forward="true" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding />
         </state>
       </provider>

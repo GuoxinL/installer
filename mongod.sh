@@ -17,9 +17,12 @@ source utils/smelly_and_long.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
-    echo -e "$1" > /soft/$2/conf/mongod.conf
+    echo -e ${mongodb_config} > /soft/$1/conf/mongod.conf
 }
 
+function append_mongod_config {
+    echo -e ${mongodb_config_append} >> /soft/$1/conf/mongod.conf
+}
 function genernate_mongo_user_conf_js {
     echo -e $mongodb_config_create_user_admin > /tmp/create_user_admin.js
     echo -e $mongodb_config_create_user_birdnest > /tmp/create_user_birdnest.js
@@ -52,7 +55,7 @@ mkdir /soft/${package_file%.*}/db
 mkdir /soft/${package_file%.*}/log
 
 # 创建mongo配置文件
-create_mongod_config \# ${package_file%.*}
+create_mongod_config ${package_file%.*}
 
 # 设置为服务
 set_application_as_service mongod "$mongodb_service_conf"
@@ -77,26 +80,26 @@ if  [ $? -ne 0 ] ; then
     echo "Create user birdnest fail!!!"
     exit 1
 fi
-#/soft/${package_file%.*}/bin/mongo localhost:27117 --eval /tmp/create_user.js
+/soft/${package_file%.*}/bin/mongo localhost:27117 /tmp/create_user.js
 #/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/bin/mongo localhost:27117 /tmp/create_user.js
+
+append_mongod_config ${package_file%.*}
+
+systemctl restart mongod.service
+
+# 检查运行状态
+check_is_active_over mongod
+if  [ $? -eq 1 ] ; then
+    exit 1
+fi
 #
-#create_mongod_config "" ${package_file%.*}
+#/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
 #
-#systemctl restart mongod.service
-#
-## 检查运行状态
-#check_is_active_over mongod
-#if  [ $? -eq 1 ] ; then
-#    exit 1
+#if [[ $? -eq 0 ]]; then
+#    echo "Mongo login success."
+#else
+#    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
 #fi
-##
-##/soft/${package_file%.*}/bin/mongo localhost:27117/birdnest -u yjh -p yjh123456790
-##
-##if [[ $? -eq 0 ]]; then
-##    echo "Mongo login success."
-##else
-##    echo "[Error]Mongo login fail, Configuration file import fail or configuration error"
-##fi
-#
-## 检查是否安装成功
-#check_is_active_over mongod
+
+# 检查是否安装成功
+check_is_active_over mongod
