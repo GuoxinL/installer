@@ -17,11 +17,11 @@ source utils/smelly_and_long.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
-    echo -e ${mongodb_config} > /soft/$1/conf/mongod.conf
+    echo -e "${mongodb_config}" > /soft/$1/conf/mongod.conf
 }
 
 function append_mongod_config {
-    echo -e ${mongodb_config_append} >> /soft/$1/conf/mongod.conf
+    echo -e "${mongodb_config_append}" >> /soft/$1/conf/mongod.conf
 }
 function genernate_mongo_user_conf_js {
     echo -e $mongodb_config_create_user_admin > /tmp/create_user_admin.js

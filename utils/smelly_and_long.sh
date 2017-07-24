@@ -11,8 +11,8 @@
 #
 #   MongoDB Configuration
 #
-mongodb_config="processManagement:\n\ \ \ \ fork: true\nnet:\n\ \ \ \ bindIp: 0.0.0.0\n\ \ \ \ port: 27117\nstorage:\n\ \ \ \ dbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\n\ \ \ \ journal: \n\ \ \ \ \ \ \ \ enabled: true\nsystemLog:\n\ \ \ \ destination: file\n\ \ \ \ path: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n\ \ \ \ logAppend: true\n"
-mongodb_config_append="security:\n\ \ \ \ authorization: enabled"
+mongodb_config="processManagement:\n    fork: true\nnet:\n    bindIp: 0.0.0.0\n    port: 27117\nstorage:\n    dbPath: /soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/db\n    journal: \n        enabled: true\nsystemLog:\n    destination: file\n    path: \"/soft/mongodb-linux-x86_64-ubuntu1604-3.4.4/log/mongod.log\"\n    logAppend: true\n"
+mongodb_config_append="security:\n    authorization: enabled"
 
 #
 #   MongoDB create user script
