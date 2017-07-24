@@ -31,7 +31,7 @@ $1security:\n
 #
 #   MongoDB create user script
 #
-mongodb_config_create_user_js="conn=new Mongo('localhost:27117')db = conn.getDB('admin')db.createUser({    user: 'admin',    pwd: 'admin',    roles: [ { role: 'userAdminAnyDatabase', db: 'admin' } ]})db = conn.getDB('birdnest')db.createUser({    user: 'yjh',    pwd: 'yjh123456790',    roles: [ { role: 'readWrite', db: 'birdnest' } ]})"
+mongodb_config_create_user_js="conn = new Mongo('localhost:27117')\ndb = conn.getDB('admin')\ndb.createUser({\n    user: 'admin',\n    pwd: 'admin',\n    roles: [{\n        role: 'userAdminAnyDatabase',\n        db: 'admin'\n    }]\n})\ndb = conn.getDB('birdnest')\ndb.createUser({\n    user: 'yjh',\n    pwd: 'yjh123456790',\n    roles: [{\n        role: 'readWrite',\n        db: 'birdnest'\n    }]\n})"
 
 #
 #   MongoDB Service config
