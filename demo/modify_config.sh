@@ -8,9 +8,11 @@ while read line
 do
     result=$(echo $line | grep "${opensips_config_ip_end}")
     if  [[ "$result" == "" ]] ; then
+        echo "result"$result
+        echo "line"$line
         echo ${opensips_config_ip_start}${addrs}${opensips_config_ip_end} >> $config_path
-        exit 0
     else
-        echo $line >> $config_path
+        echo "result"$result
+        echo "line"$line
     fi
 done < ${config_path}.bak
