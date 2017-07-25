@@ -71,6 +71,8 @@ echo -e "$OPENSIOS_CONFIG_MYSQL" > /usr/local/etc/opensips/opensipsctlrc
 addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
 modify_opensips_config "/usr/local/etc/opensips/opensips.cfg" "CUSTOMIZE ME" "${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END}"
 
+opensipsdbctl create
+
 # 设置为服务
 set_application_as_service opensips "$OPENSIPS_SERVICE_CONF"
 
