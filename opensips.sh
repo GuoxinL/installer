@@ -62,7 +62,7 @@ do
     else
         echo $line >> $config_path
     fi
-done
+done < ${config_path}.bak
 
 ## 设置为服务
 #set_application_as_service opensips "$opensips_service_conf"

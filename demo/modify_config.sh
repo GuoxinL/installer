@@ -13,4 +13,4 @@ do
     else
         echo $line >> $config_path
     fi
-done
+done < ${config_path}.bak
