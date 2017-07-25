@@ -14,7 +14,7 @@ source ./utils/smelly_and_long.sh
 # 修改配置文件
 function modify_opensips_config {
     addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
-    config_path="/usr/local/etc/opensips/opensips.cfg"
+    config_file_path="/usr/local/etc/opensips/opensips.cfg"
     mv ${config_path} ${config_path}.bak
     while read line
     do
@@ -68,7 +68,8 @@ source /etc/profile
 echo -e "$OPENSIOS_CONFIG_MYSQL" > /usr/local/etc/opensips/opensipsctlrc
 
 # 修改 opensips 配置文件
-modify_opensips_config
+addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
+modify_opensips_config "/usr/local/etc/opensips/opensips.cfg" "CUSTOMIZE ME" "${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END}"
 
 # 设置为服务
 set_application_as_service opensips "$OPENSIPS_SERVICE_CONF"

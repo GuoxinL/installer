@@ -8,6 +8,7 @@
 
 ############################################################
 
+source ./smelly_and_long.sh
 # check is active over
 # params
 #   $1 application_name
@@ -109,4 +110,25 @@ function check_is_active {
     else
         return 1
     fi
+}
+
+# Modify Configuration file
+# Params
+#   $1 Configuration file path
+#   $2 before modification line
+#   $3 after modification line
+function modify_opensips_config {
+    config_file_path=$1
+    before=$2
+    after=$3
+    mv ${config_file_path} ${config_file_path}.bak
+    while read line
+    do
+        result=$(echo $line | grep ${before})
+        if  [[ "$result" != "" ]] ; then
+            echo ${after} >> ${config_file_path}
+        else
+            echo $line >> ${config_file_path}
+        fi
+    done < ${config_file_path}.bak
 }
