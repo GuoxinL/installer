@@ -55,14 +55,11 @@ config_path="/usr/local/etc/opensips/opensips.cfg"
 mv ${config_path} ${config_path}.bak
 while read line
 do
-    result=$(echo $line | grep "${opensips_config_ip_end}")
-    if  [[ "$result" == "" ]] ; then
-        echo "result"$result
-        echo "line"$line
+    result=$(echo $line | grep "CUSTOMIZE ME")
+    if  [[ "$result" != "" ]] ; then
         echo ${opensips_config_ip_start}${addrs}${opensips_config_ip_end} >> $config_path
     else
-        echo "result"$result
-        echo "line"$line
+        echo $line >> $config_path
     fi
 done < ${config_path}.bak
 
