@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/modify_config.sh" afterPath="$PROJECT_DIR$/demo/modify_config.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opensips.sh" afterPath="$PROJECT_DIR$/opensips.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -54,8 +53,8 @@
       <file leaf-file-name="opensips.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/opensips.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="409">
+              <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -461,13 +460,6 @@
       <option name="presentableId" value="Default" />
       <updated>1500272541739</updated>
     </task>
-    <task id="LOCAL-00033" summary="test mongod and neo4j">
-      <created>1500522279496</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1500522279496</updated>
-    </task>
     <task id="LOCAL-00034" summary="test mongod and neo4j">
       <created>1500522621919</created>
       <option name="number" value="00034" />
@@ -804,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500951732273</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="delete --eval">
+      <created>1500951931270</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1500951931270</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1190,8 +1189,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/opensips.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="409">
+          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
           <folding />
         </state>
       </provider>
