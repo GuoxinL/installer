@@ -17,20 +17,17 @@ source utils/smelly_and_long.sh
 #“*”只是一个通配符可以不要
 
 function create_mongod_config {
-    echo -e "${mongodb_config}" > /soft/$1/conf/mongod.conf
+    echo -e "${MONGODB_CONFIG}" > /soft/$1/conf/mongod.conf
 }
 
 function append_mongod_config {
-    echo -e "${mongodb_config_append}" >> /soft/$1/conf/mongod.conf
+    echo -e "${MONGODB_CONFIG_APPEND}" >> /soft/$1/conf/mongod.conf
 }
 
-function append_mongod_config {
-    echo -e  >> /soft/$1/conf/mongod.conf
-}
 function genernate_mongo_user_conf_js {
-    echo -e "$mongodb_config_create_user_admin" > /tmp/create_user_admin.js
-    echo -e "$mongodb_config_create_user_birdnest" > /tmp/create_user_birdnest.js
-    echo -e "${mongodb_check_user_birdnest_login}" > /tmp/check_user_birdnest_login.js
+    echo -e "$MONGODB_CONFIG_CREATE_USER_ADMIN" > /tmp/create_user_admin.js
+    echo -e "$MONGODB_CONFIG_CREATE_USER_BIRDNEST" > /tmp/create_user_birdnest.js
+    echo -e "${MONGODB_CHECK_USER_BIRDNEST_LOGIN}" > /tmp/check_user_birdnest_login.js
 }
 
 # 验证系统
@@ -63,7 +60,7 @@ mkdir /soft/${package_file%.*}/log
 create_mongod_config ${package_file%.*}
 
 # 设置为服务
-set_application_as_service mongod "$mongodb_service_conf"
+set_application_as_service mongod "$MONGODB_SERVICE_CONF"
 
 # 检查运行状态
 check_is_active_over mongod

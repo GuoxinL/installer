@@ -35,10 +35,10 @@ cd /soft/${package_file%%.tar.gz*}/
 make
 make install
 # 修改配置文件
-echo -e $redis_config >> /soft/${package_file%%.tar.gz*}/redis.conf
+echo -e $REDIS_CONFIG >> /soft/${package_file%%.tar.gz*}/redis.conf
 
 # 设置为服务
-set_application_as_service redis "$redis_service_conf"
+set_application_as_service redis "$REDIS_SERVICE_CONF"
 
 # 检查是否安装成功
 check_is_active_over redis

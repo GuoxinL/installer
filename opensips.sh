@@ -11,6 +11,22 @@
 source ./utils/service-utils.sh
 source ./utils/smelly_and_long.sh
 
+# 修改配置文件
+function modify_opensips_config {
+    addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
+    config_path="/usr/local/etc/opensips/opensips.cfg"
+    mv ${config_path} ${config_path}.bak
+    while read line
+    do
+        result=$(echo $line | grep "CUSTOMIZE ME")
+        if  [[ "$result" != "" ]] ; then
+            echo ${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END} >> $config_path
+        else
+            echo $line >> $config_path
+        fi
+    done < ${config_path}.bak
+}
+
 # 验证系统
 check_system
 
@@ -45,26 +61,17 @@ make all include_modules="db_mysql"
 make include_modules="db_mysql" prefix="/usr/local" install
 
 # 设置环境变量
-echo -e "$opensips_environment_variable" >> /etc/profile
+echo -e "$OPENSIPS_ENVIRONMENT_VARIABLE" >> /etc/profile
 source /etc/profile
+
 # 设置OpenSips 配置
-echo -e "$opensios_config_mysql" > /usr/local/etc/opensips/opensipsctlrc
+echo -e "$OPENSIOS_CONFIG_MYSQL" > /usr/local/etc/opensips/opensipsctlrc
 
-addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
-config_path="/usr/local/etc/opensips/opensips.cfg"
-mv ${config_path} ${config_path}.bak
-while read line
-do
-    result=$(echo $line | grep "CUSTOMIZE ME")
-    if  [[ "$result" != "" ]] ; then
-        echo ${opensips_config_ip_start}${addrs}${opensips_config_ip_end} >> $config_path
-    else
-        echo $line >> $config_path
-    fi
-done < ${config_path}.bak
+# 修改 opensips 配置文件
+modify_opensips_config
 
-## 设置为服务
-#set_application_as_service opensips "$opensips_service_conf"
-#
-## 检查是否安装成功
-#check_is_active_over opensips
+# 设置为服务
+set_application_as_service opensips "$OPENSIPS_SERVICE_CONF"
+
+# 检查是否安装成功
+check_is_active_over opensips

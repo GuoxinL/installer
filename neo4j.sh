@@ -44,10 +44,10 @@ check_package ${package_file} ${package_distory} ${package_url}
 tar -xf ${package_distory}${package_file} -C /soft/
 
 # 修改配置文件
-echo -e $neo4j_config >> /soft/${package_file%-*}/conf/neo4j.conf
+echo -e $NEO4J_CONFIG >> /soft/${package_file%-*}/conf/neo4j.conf
 
 # 设置为服务
-set_application_as_service neo4j "$neo4j_service_conf"
+set_application_as_service neo4j "$NEO4J_SERVICE_CONF"
 
 # 检查是否安装成功
 check_is_active_over neo4j
@@ -62,10 +62,13 @@ echo "set neo4j password."
 #     -d $'{"password": "111111"}'
 # 用这个命令替代 需要安装
 apt install httpie -y
+
 http -a neo4j:neo4j POST http://127.0.0.1:7474/user/neo4j/password password=foobar
 if  [ $? -ne 0 ] ; then
     echo "neo4j set password success"
     exit 0
+else
+    echo "neo4j set password fail"
 fi
 
 
