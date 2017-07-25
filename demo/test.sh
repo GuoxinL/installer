@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ../utils/smelly_and_long.sh
+source ../utils/service-utils.sh
 
 package_file="mongodb-linux-x86_64-ubuntu1604-3.4.4.tar.gz"
 echo ${package_file%%.tar.gz*}
