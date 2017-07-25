@@ -30,6 +30,8 @@ function genernate_mongo_user_conf_js {
     echo -e "${MONGODB_CHECK_USER_BIRDNEST_LOGIN}" > /tmp/check_user_birdnest_login.js
 }
 
+# 验证权限
+check_permission
 # 验证系统
 check_system
 

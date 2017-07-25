@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 
+
 source ./utils/service-utils.sh
 
+# 验证权限
+check_permission
 # 验证系统
 check_system
 

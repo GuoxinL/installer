@@ -27,6 +27,8 @@ function modify_opensips_config {
     done < ${config_path}.bak
 }
 
+# 验证权限
+check_permission
 # 验证系统
 check_system
 

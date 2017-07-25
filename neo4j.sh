@@ -22,6 +22,8 @@ source ./utils/smelly_and_long.sh
 # Application Config
 
 
+# 验证权限
+check_permission
 # 验证系统
 check_system
 

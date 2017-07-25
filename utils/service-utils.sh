@@ -99,6 +99,13 @@ function check_system {
         exit 2
     fi
 }
+# 验证权限
+function check_permission {
+    user=`whoami`
+    if [ "$user" != "root" ]; then
+        echo "You Password" | su root
+    fi
+}
 
 #*    0 的为"真"( true )
 #* 非 1 的为"假"( false )

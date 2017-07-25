@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ../utils/smelly_and_long.sh
+
 package_file="mongodb-linux-x86_64-ubuntu1604-3.4.4.tar.gz"
 echo ${package_file%%.tar.gz*}
 
@@ -21,3 +23,6 @@ function string_paramter {
 }
 param="#"
 string_paramter $param "#"
+
+# 验证权限
+check_permission

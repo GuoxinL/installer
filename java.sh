@@ -10,6 +10,8 @@
 
 source ./utils/service-utils.sh
 
+# 验证权限
+check_permission
 # 验证系统
 check_system
 # From http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html
