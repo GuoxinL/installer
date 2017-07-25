@@ -44,6 +44,25 @@ cd /soft/${package_file%%.tar.gz*}/
 make all include_modules="db_mysql"
 make include_modules="db_mysql" prefix="/usr/local" install
 
+# 设置环境变量
+echo -e "$opensips_environment_variable" >> /etc/profile
+source /etc/profile
+# 设置OpenSips 配置
+echo -e "$opensios_config_mysql" > /usr/local/etc/opensips/opensipsctlrc
+
+addrs=/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"
+config_path="/usr/local/etc/opensips/opensips.cfg"
+mv ${config_path} ${config_path}.bak
+while read line
+do
+    result=$(echo $line | grep "${opensips_config_ip_end}")
+    if  [[ "$result" == "" ]] ; then
+        echo ${opensips_config_ip_start}${addrs}${opensips_config_ip_end} >> $config_path
+        exit 0
+    else
+        echo $line >> $config_path
+    fi
+done
 ## 设置为服务
 #set_application_as_service opensips "$opensips_service_conf"
 #

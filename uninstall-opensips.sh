@@ -8,6 +8,7 @@
 
 ############################################################
 
+rm -rf /soft/opensips-2.3.0/
 rm -rf /usr/local/etc/opensips/
 rm -rf /usr/local/share/opensips/
 rm -rf /usr/local/share/man/
