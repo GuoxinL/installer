@@ -8,6 +8,8 @@ source ./utils/smelly_and_long.sh
 check_permission
 # 验证系统
 check_system
+# 文件名称
+file_name=`get_file_name`
 
 # Use mkdir create system need directory
 mkdir /soft/ ~/download/
@@ -20,4 +22,4 @@ apt-get install librxtx-java
 cp /usr/lib/jni/librxtxParallel.so /lib64/librxtxParallel.so
 cp /usr/lib/jni/librxtxSerial.so /lib64/librxtxSerial.so
 
-modify_opensips_config "/etc/ssh/sshd_config" "PermitRootLogin" "PermitRootLogin yes"
+modify_config "/etc/ssh/sshd_config" "PermitRootLogin" "PermitRootLogin yes"

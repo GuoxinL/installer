@@ -125,18 +125,23 @@ function check_is_active {
 #   $1 Configuration file path
 #   $2 The key words to be replaced
 #   $3 after modification line
-function modify_opensips_config {
+function modify_config {
     config_file_path=$1
     keyword=$2
     after=$3
     mv ${config_file_path} ${config_file_path}.bak
     while read line
     do
-        result=$(echo $line | grep ${keyword})
+        result=$(echo $line | grep "${keyword}")
         if  [[ "$result" != "" ]] ; then
             echo ${after} >> ${config_file_path}
         else
             echo $line >> ${config_file_path}
         fi
     done < ${config_file_path}.bak
+}
+
+function get_file_name {
+    var=${0##*/}
+    echo ${var%.sh*}
 }

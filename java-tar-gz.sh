@@ -14,6 +14,8 @@ source ./utils/service-utils.sh
 check_permission
 # 验证系统
 check_system
+# 文件名称
+file_name=`get_file_name`
 
 # 验证是否安装Java8
 version_info=`java -version`

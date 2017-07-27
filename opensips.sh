@@ -31,9 +31,11 @@ function modify_opensips_config {
 check_permission
 # 验证系统
 check_system
+# 文件名称
+file_name=`get_file_name`
 
 # 验证 opensips 是否运行
-check_is_active opensips
+check_is_active ${file_name}
 if  [ $? -eq 0 ] ; then
     echo "opensips runing, don't need install"
     exit 0
@@ -71,12 +73,12 @@ echo -e "$OPENSIOS_CONFIG_MYSQL" > /usr/local/etc/opensips/opensipsctlrc
 
 # 修改 opensips 配置文件
 addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
-modify_opensips_config "/usr/local/etc/opensips/opensips.cfg" "CUSTOMIZE ME" "${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END}"
+modify_config "/usr/local/etc/opensips/opensips.cfg" "CUSTOMIZE" "${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END}"
 
 opensipsdbctl create
 
 # 设置为服务
-set_application_as_service opensips "$OPENSIPS_SERVICE_CONF"
+set_application_as_service ${file_name} "$OPENSIPS_SERVICE_CONF"
 
 # 检查是否安装成功
-check_is_active_over opensips
+check_is_active_over ${file_name}

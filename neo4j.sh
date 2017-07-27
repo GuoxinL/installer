@@ -18,14 +18,12 @@ source ./utils/smelly_and_long.sh
 #    $$：是脚本运行的当前进程ID号；
 #    $?：是显示最后命令的退出状态，0表示没有错误，其他表示有错误；
 
-
-# Application Config
-
-
 # 验证权限
 check_permission
 # 验证系统
 check_system
+# 文件名称
+file_name=`get_file_name`
 
 # 验证 neo4j 是否运行
 check_is_active neo4j
@@ -49,10 +47,10 @@ tar -xf ${package_distory}${package_file} -C /soft/
 echo -e $NEO4J_CONFIG >> /soft/${package_file%-*}/conf/neo4j.conf
 
 # 设置为服务
-set_application_as_service neo4j "$NEO4J_SERVICE_CONF"
+set_application_as_service ${file_name} "$NEO4J_SERVICE_CONF"
 
 # 检查是否安装成功
-check_is_active_over neo4j
+check_is_active_over {file_name}
 
 sleep 3
 echo "set neo4j password."
@@ -65,13 +63,9 @@ echo "set neo4j password."
 # 用这个命令替代 需要安装
 apt install httpie -y
 
-http -a neo4j:neo4j POST http://127.0.0.1:7474/user/neo4j/password password=111111
-if  [ $? -ne 0 ] ; then
-    echo "neo4j set password success"
-    exit 0
+result=`http -a neo4j:neo4j POST http://127.0.0.1:7474/user/neo4j/password password=111111`
+if [[ $(echo $line | grep "HTTP/1.1 200 OK") != null ]] ; then
+    echo "Modify password success"
 else
-    echo "neo4j set password fail"
+    echo "Modify password fail"
 fi
-
-
-#set_neo4j_password

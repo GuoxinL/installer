@@ -14,6 +14,9 @@ source ./utils/service-utils.sh
 check_permission
 # 验证系统
 check_system
+# 文件名称
+file_name=`get_file_name`
+
 # From http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html
 #
 # You need to run this script as root

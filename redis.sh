@@ -15,9 +15,11 @@ source ./utils/smelly_and_long.sh
 check_permission
 # 验证系统
 check_system
+# 文件名称
+file_name=`get_file_name`
 
 # 验证 redis 是否运行
-check_is_active redis
+check_is_active ${file_name}
 if  [ $? -eq 0 ] ; then
     echo "redis runing, don't need install"
     exit 0
@@ -36,11 +38,12 @@ tar -xf ${package_distory}${package_file} -C /soft/
 cd /soft/${package_file%%.tar.gz*}/
 make
 make install
+
 # 修改配置文件
-echo -e $REDIS_CONFIG >> /soft/${package_file%%.tar.gz*}/redis.conf
+modify_config "/soft/${package_file%%.tar.gz*}/redis.conf" "requirepass" "requirepass 111111"
 
 # 设置为服务
-set_application_as_service redis "$REDIS_SERVICE_CONF"
+set_application_as_service ${file_name} "$REDIS_SERVICE_CONF"
 
 # 检查是否安装成功
-check_is_active_over redis
+check_is_active_over ${file_name}
