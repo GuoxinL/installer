@@ -120,6 +120,7 @@ function check_is_active {
 }
 
 # Modify Configuration file
+# Warning: If the before parameter contains Spaces, you need to use “\ ” escape
 # Params
 #   $1 Configuration file path
 #   $2 before modification line

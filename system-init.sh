@@ -20,4 +20,4 @@ apt-get install librxtx-java
 cp /usr/lib/jni/librxtxParallel.so /lib64/librxtxParallel.so
 cp /usr/lib/jni/librxtxSerial.so /lib64/librxtxSerial.so
 
-modify_opensips_config "/etc/ssh/sshd_config" "PermitRootLogin prohibit-password" "PermitRootLogin yes"
+modify_opensips_config "/etc/ssh/sshd_config" "PermitRootLogin\ prohibit-password" "PermitRootLogin yes"
