@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java.sh" afterPath="$PROJECT_DIR$/java.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system-init.sh" afterPath="$PROJECT_DIR$/system-init.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="java.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="java.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
@@ -100,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="system-init.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="system-init.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/system-init.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -199,8 +199,8 @@
         <option value="$PROJECT_DIR$/demo/test.sh" />
         <option value="$PROJECT_DIR$/java-tar-gz.sh" />
         <option value="$PROJECT_DIR$/utils/service-utils.sh" />
-        <option value="$PROJECT_DIR$/system-init.sh" />
         <option value="$PROJECT_DIR$/java.sh" />
+        <option value="$PROJECT_DIR$/system-init.sh" />
       </list>
     </option>
   </component>
@@ -455,13 +455,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500272541739</updated>
-    </task>
-    <task id="LOCAL-00043" summary="test mongod and neo4j">
-      <created>1500535384776</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1500535384776</updated>
     </task>
     <task id="LOCAL-00044" summary="test mongod and neo4j">
       <created>1500535516373</created>
@@ -799,7 +792,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501120566458</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="delete --eval">
+      <created>1501120811559</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1501120811559</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1169,18 +1169,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system-init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system-init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>

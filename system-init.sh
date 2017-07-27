@@ -16,12 +16,8 @@ mkdir /soft/ ~/download/
 echo -e "${LANGUAGE}" > /etc/default/locale
 
 # 安装rxtx依赖包
-function librxtx{
-    apt-get install librxtx-java
-    cp /usr/lib/jni/librxtxParallel.so /lib64/librxtxParallel.so
-    cp /usr/lib/jni/librxtxSerial.so /lib64/librxtxSerial.so
-}
-
-librxtx
+apt-get install librxtx-java
+cp /usr/lib/jni/librxtxParallel.so /lib64/librxtxParallel.so
+cp /usr/lib/jni/librxtxSerial.so /lib64/librxtxSerial.so
 
 modify_opensips_config "/etc/ssh/sshd_config" "PermitRootLogin prohibit-password" "PermitRootLogin yes"
