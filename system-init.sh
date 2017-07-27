@@ -3,7 +3,7 @@
 
 
 source ./utils/service-utils.sh
-
+source ./utils/smelly_and_long.sh
 # 验证权限
 check_permission
 # 验证系统
