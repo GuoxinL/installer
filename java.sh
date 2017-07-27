@@ -7,7 +7,7 @@
 #         author : liugx@bjnangle.com
 
 ############################################################
-
+#
 source ./utils/service-utils.sh
 
 # 验证权限

@@ -17,7 +17,7 @@ echo -e "${LANGUAGE}" > /etc/default/locale
 
 # 安装rxtx依赖包
 function librxtx{
-    apt-get install librxtx-java make gcc g++
+    apt-get install librxtx-java
     cp /usr/lib/jni/librxtxParallel.so /lib64/librxtxParallel.so
     cp /usr/lib/jni/librxtxSerial.so /lib64/librxtxSerial.so
 }

@@ -49,7 +49,7 @@ function check_package {
         echo "Downloading..."
         wget ${package_url} -O ${package_distory}${package_file}
         echo $?
-        if [ 0 -eq $? ]; then
+        if [ $? -eq 0 ]; then
             echo "Download successfully!"
         else
             echo "Download fail!"
