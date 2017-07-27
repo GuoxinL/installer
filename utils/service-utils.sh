@@ -123,16 +123,16 @@ function check_is_active {
 # Warning: If the before parameter contains Spaces, you need to use “\ ” escape
 # Params
 #   $1 Configuration file path
-#   $2 before modification line
+#   $2 The key words to be replaced
 #   $3 after modification line
 function modify_opensips_config {
     config_file_path=$1
-    before=$2
+    keyword=$2
     after=$3
     mv ${config_file_path} ${config_file_path}.bak
     while read line
     do
-        result=$(echo $line | grep ${before})
+        result=$(echo $line | grep ${keyword})
         if  [[ "$result" != "" ]] ; then
             echo ${after} >> ${config_file_path}
         else
