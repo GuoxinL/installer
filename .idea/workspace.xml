@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="delete --eval">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nginx.sh" />
+    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apollo.sh" afterPath="$PROJECT_DIR$/apollo.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/test.sh" afterPath="$PROJECT_DIR$/demo/test.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-tar-gz.sh" afterPath="$PROJECT_DIR$/java-tar-gz.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java.sh" afterPath="$PROJECT_DIR$/java.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongod.sh" afterPath="$PROJECT_DIR$/mongod.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo4j.sh" afterPath="$PROJECT_DIR$/neo4j.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opensips.sh" afterPath="$PROJECT_DIR$/opensips.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/redis.sh" afterPath="$PROJECT_DIR$/redis.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system-init.sh" afterPath="$PROJECT_DIR$/system-init.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/service-utils.sh" afterPath="$PROJECT_DIR$/utils/service-utils.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +13,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExportToHTMLSettings">
     <option name="printScope" value="1" />
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
@@ -33,7 +22,7 @@
       <file leaf-file-name="neo4j.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo4j.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="990">
               <caret line="55" column="15" lean-forward="false" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="15" />
               <folding />
             </state>
@@ -43,18 +32,8 @@
       <file leaf-file-name="nginx.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nginx.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opensips.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opensips.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="82" column="10" lean-forward="true" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
+            <state relative-caret-position="551">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,68 +42,18 @@
       <file leaf-file-name="redis.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/redis.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongod.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mongod.sh">
+      <file leaf-file-name="opensips.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/opensips.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-645">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="java-tar-gz.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-tar-gz.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smelly_and_long.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="service-utils.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="105" column="37" lean-forward="false" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="system-init.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system-init.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="java.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="497">
+              <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -168,9 +97,9 @@
       <find>apt</find>
       <find>apollo</find>
       <find>mongod</find>
-      <find>neo4j</find>
-      <find>opensips</find>
       <find>redis</find>
+      <find>opensips</find>
+      <find>neo4j</find>
     </findStrings>
     <replaceStrings>
       <replace>=</replace>
@@ -210,16 +139,17 @@
         <option value="$PROJECT_DIR$/system-init.sh" />
         <option value="$PROJECT_DIR$/neo4j.sh" />
         <option value="$PROJECT_DIR$/nginx.sh" />
-        <option value="$PROJECT_DIR$/opensips.sh" />
         <option value="$PROJECT_DIR$/redis.sh" />
         <option value="$PROJECT_DIR$/utils/service-utils.sh" />
+        <option value="$PROJECT_DIR$/opensips.sh" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="-6" />
-    <option name="width" value="1920" />
-    <option name="height" value="1086" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="279" />
+    <option name="y" value="92" />
+    <option name="width" value="923" />
+    <option name="height" value="685" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -237,49 +167,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="installer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="installer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="installer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="installer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="installer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="installer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="installer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="installer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -311,84 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Bash.test.sh (1)">
-    <configuration default="false" name="test.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="bash" />
-      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.sh" />
-      <option name="PARAMETERS" value="" />
-      <module name="installer" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="neo4j.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="bash" />
-      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neo4j.sh" />
-      <option name="PARAMETERS" value="" />
-      <module name="installer" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="mongod.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="bash" />
-      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mongod.sh" />
-      <option name="PARAMETERS" value="" />
-      <module name="installer" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="ApexTest" factoryName="Apex Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="install" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="install" />
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -406,6 +228,47 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="install" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="install" />
+    </configuration>
+    <configuration default="true" type="ApexTest" factoryName="Apex Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -423,7 +286,27 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="test.sh (1)" type="BashConfigurationType" factoryName="Bash">
+    <configuration name="mongod.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mongod.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="installer" />
+      <envs />
+    </configuration>
+    <configuration name="neo4j.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neo4j.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="installer" />
+      <envs />
+    </configuration>
+    <configuration name="test.sh (1)" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demo" />
@@ -432,9 +315,18 @@
       <option name="PARAMETERS" value="" />
       <module name="installer" />
       <envs />
-      <method />
     </configuration>
-    <configuration default="false" name="verification-system.sh" type="BashConfigurationType" factoryName="Bash">
+    <configuration name="test.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="installer" />
+      <envs />
+    </configuration>
+    <configuration name="verification-system.sh" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/depend" />
@@ -443,22 +335,14 @@
       <option name="PARAMETERS" value="" />
       <module name="installer" />
       <envs />
-      <method />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Bash.test.sh (1)" />
       <item index="1" class="java.lang.String" itemvalue="Bash.verification-system.sh" />
-      <item index="2" class="java.lang.String" itemvalue="Bash.test.sh" />
+      <item index="2" class="java.lang.String" itemvalue="Bash.mongod.sh" />
       <item index="3" class="java.lang.String" itemvalue="Bash.neo4j.sh" />
-      <item index="4" class="java.lang.String" itemvalue="Bash.mongod.sh" />
+      <item index="4" class="java.lang.String" itemvalue="Bash.test.sh" />
     </list>
-    <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Bash.mongod.sh" />
-        <item index="1" class="java.lang.String" itemvalue="Bash.test.sh" />
-        <item index="2" class="java.lang.String" itemvalue="Bash.neo4j.sh" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SFStoredExecutionPersistentComponent">
     <executions>
@@ -479,13 +363,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500272541739</updated>
-    </task>
-    <task id="LOCAL-00049" summary="test mongod and neo4j">
-      <created>1500539145660</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1500539145660</updated>
     </task>
     <task id="LOCAL-00050" summary="test mongod and neo4j">
       <created>1500540218046</created>
@@ -823,7 +700,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501124379224</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="delete --eval">
+      <created>1501145533543</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1501145533543</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView">
@@ -839,28 +723,28 @@
     <frame x="0" y="-6" width="1920" height="1086" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13951011" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15192507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5318792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31879196" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13258786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15192507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31879196" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -928,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,7 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,54 +1002,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system-init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongod.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo4j.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="990">
           <caret line="55" column="15" lean-forward="false" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nginx.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="51" column="33" lean-forward="false" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opensips.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="82" column="10" lean-forward="true" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redis.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1183,7 +1017,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1191,22 +1031,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="9" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system-init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongod.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-645">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
+        <state relative-caret-position="750">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nginx.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
+    <entry file="file://$PROJECT_DIR$/redis.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="105" column="37" lean-forward="false" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
+        <state relative-caret-position="630">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opensips.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
           <folding />
         </state>
       </provider>

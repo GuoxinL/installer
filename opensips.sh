@@ -42,7 +42,7 @@ if  [ $? -eq 0 ] ; then
 fi
 
 # 安装相关依赖
-apt-get install perl bison flex zlib1g-dev libxml2-dev libxslt1-dev libncurses5-dev -y
+apt-get install perl bison flex zlib1g-dev libxml2-dev libxslt1-dev libncurses5-dev make -y
 # 安装mysql
 debconf-set-selections <<< 'mysql-server-5.7 mysql-server/root_password password root'
 debconf-set-selections <<< 'mysql-server-5.7 mysql-server/root_password_again password root'
