@@ -131,6 +131,7 @@ function modify_config {
     mv ${config_file_path} ${config_file_path}.bak
     while read line
     do
+        echo ${line}
         result=$(echo $line | grep "${keyword}")
         if  [[ "$result" != "" ]] ; then
             echo ${after} >> ${config_file_path}
