@@ -8,7 +8,6 @@
 
 ############################################################
 
-source ./smelly_and_long.sh
 # check is active over
 # params
 #   $1 application_name
