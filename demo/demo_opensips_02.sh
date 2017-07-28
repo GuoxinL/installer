@@ -24,4 +24,5 @@ opensipsdbctl create
 mysql
 /etc/init.d/opensips start
 tail /var/log/messages
+
 opensipsctl moni

@@ -28,6 +28,7 @@ copy_configs()
 	_UNAME=`uname -a`;
     _IS_64_BIT=`echo "$_UNAME"  | grep x86_64`
 
+
     if [ -n "$_IS_64_BIT" ];  then
         cp -fr /usr/src/mor_proxy/64bit/default/opensips /etc/default/
         cp -fr /usr/src/mor_proxy/64bit/init/opensips /etc/init.d/

@@ -29,4 +29,5 @@ check_permission
 
 
 file_name=`get_file_name`
+
 echo ${file_name}
