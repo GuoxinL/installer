@@ -18,12 +18,13 @@ function modify_opensips_config {
     mv ${config_file_path} ${config_file_path}.bak
     while read line
     do
-        result=$(echo $line | grep "CUSTOMIZE ME")
-        if  [[ "$result" != "" ]] ; then
-            echo ${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END} >> $config_file_path
-        else
-            echo $line >> $config_file_path
-        fi
+        echo -e "[line]\t"$line
+#        result=$(echo $line | grep "CUSTOMIZE ME")
+#        if  [[ "$result" != "" ]] ; then
+#            echo ${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END} >> $config_file_path
+#        else
+#            echo $line >> $config_file_path
+#        fi
     done < ${config_file_path}.bak
 }
 
