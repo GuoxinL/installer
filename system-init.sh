@@ -22,4 +22,4 @@ apt-get install librxtx-java
 cp /usr/lib/jni/librxtxParallel.so /lib64/librxtxParallel.so
 cp /usr/lib/jni/librxtxSerial.so /lib64/librxtxSerial.so
 
-modify_config "/etc/ssh/sshd_config" "PermitRootLogin" "PermitRootLogin yes"
+modify_config "/etc/ssh/sshd_config" "without-password" "yes"

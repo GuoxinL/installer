@@ -128,20 +128,21 @@ function modify_config {
     config_file_path=$1
     keyword=$2
     after=$3
-    mv ${config_file_path} ${config_file_path}.bak
-    while read line
-    do
-        echo "[line]\t\t\t"${line}
-        echo "[config_file_path]\t\t\t"${config_file_path}
-        echo "[line]\t\t\t"${keyword}
-        echo "[line]\t\t\t"${after}
-        result=$(echo $line | grep "${keyword}")
-        if  [[ "$result" != "" ]] ; then
-            echo "${after}" >> ${config_file_path}
-        else
-            echo "$line" >> ${config_file_path}
-        fi
-    done < ${config_file_path}.bak
+    cp ${config_file_path} ${config_file_path}.bak
+    sed -i "s/${keyword}/${after}/g" ${config_file_path}
+#    while read line
+#    do
+#        echo "[line]\t\t\t"${line}
+#        echo "[config_file_path]\t\t\t"${config_file_path}
+#        echo "[line]\t\t\t"${keyword}
+#        echo "[line]\t\t\t"${after}
+#        result=$(echo $line | grep "${keyword}")
+#        if  [[ "$result" != "" ]] ; then
+#            echo "${after}" >> ${config_file_path}
+#        else
+#            echo "$line" >> ${config_file_path}
+#        fi
+#    done < ${config_file_path}.bak
 }
 
 function get_file_name {
