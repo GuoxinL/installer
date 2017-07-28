@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="delete --eval">
+    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/demo_install_opensips.sh" afterPath="$PROJECT_DIR$/demo/demo_install_opensips.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/demo_opensips_02.sh" afterPath="$PROJECT_DIR$/demo/demo_opensips_02.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/modify_config.sh" afterPath="$PROJECT_DIR$/demo/modify_config.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/test.sh" afterPath="$PROJECT_DIR$/demo/test.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/opensips.sh" afterPath="$PROJECT_DIR$/opensips.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opensips.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="opensips.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/opensips.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="631">
+              <caret line="75" column="74" lean-forward="false" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -65,8 +62,8 @@
       <file leaf-file-name="service-utils.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="132" column="6" lean-forward="true" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
+            <state relative-caret-position="1009">
+              <caret line="134" column="45" lean-forward="false" selection-start-line="134" selection-start-column="38" selection-end-line="134" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -75,18 +72,18 @@
       <file leaf-file-name="modify_config.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/modify_config.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="7" column="58" lean-forward="false" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/test.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="486">
+              <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -190,12 +187,12 @@
         <option value="$PROJECT_DIR$/neo4j.sh" />
         <option value="$PROJECT_DIR$/nginx.sh" />
         <option value="$PROJECT_DIR$/redis.sh" />
-        <option value="$PROJECT_DIR$/opensips.sh" />
         <option value="$PROJECT_DIR$/utils/service-utils.sh" />
         <option value="$PROJECT_DIR$/demo/demo_install_opensips.sh" />
         <option value="$PROJECT_DIR$/demo/modify_config.sh" />
         <option value="$PROJECT_DIR$/demo/demo_opensips_02.sh" />
         <option value="$PROJECT_DIR$/demo/test.sh" />
+        <option value="$PROJECT_DIR$/opensips.sh" />
       </list>
     </option>
   </component>
@@ -427,13 +424,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500272541739</updated>
-    </task>
-    <task id="LOCAL-00052" summary="test mongod and neo4j">
-      <created>1500860251730</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1500860251731</updated>
     </task>
     <task id="LOCAL-00053" summary="modift mongod config">
       <created>1500862667736</created>
@@ -771,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501206114158</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="delete --eval">
+      <created>1501206286656</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1501206286657</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1092,14 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opensips.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -1108,26 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="132" column="6" lean-forward="true" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/demo_install_opensips.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/modify_config.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1142,8 +1115,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/test.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="486">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/modify_config.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="58" lean-forward="false" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1009">
+          <caret line="134" column="45" lean-forward="false" selection-start-line="134" selection-start-column="38" selection-end-line="134" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opensips.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="75" column="74" lean-forward="false" selection-start-line="75" selection-start-column="74" selection-end-line="75" selection-end-column="74" />
           <folding />
         </state>
       </provider>
