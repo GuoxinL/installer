@@ -137,9 +137,9 @@ function modify_config {
         echo "[line]\t\t\t"${after}
         result=$(echo $line | grep "${keyword}")
         if  [[ "$result" != "" ]] ; then
-            echo ${after} >> ${config_file_path}
+            echo "${after}" >> ${config_file_path}
         else
-            echo $line >> ${config_file_path}
+            echo "$line" >> ${config_file_path}
         fi
     done < ${config_file_path}.bak
 }

@@ -15,16 +15,16 @@ source ./utils/smelly_and_long.sh
 function modify_opensips_config {
     addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
     config_file_path="/usr/local/etc/opensips/opensips.cfg"
-    mv ${config_path} ${config_path}.bak
+    mv ${config_file_path} ${config_file_path}.bak
     while read line
     do
         result=$(echo $line | grep "CUSTOMIZE ME")
         if  [[ "$result" != "" ]] ; then
-            echo ${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END} >> $config_path
+            echo ${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END} >> $config_file_path
         else
-            echo $line >> $config_path
+            echo $line >> $config_file_path
         fi
-    done < ${config_path}.bak
+    done < ${config_file_path}.bak
 }
 
 # 验证权限
@@ -72,8 +72,12 @@ source /etc/profile
 echo -e "$OPENSIOS_CONFIG_MYSQL" > /usr/local/etc/opensips/opensipsctlrc
 
 # 修改 opensips 配置文件
-addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
-modify_config "/usr/local/etc/opensips/opensips.cfg" "listen=udp:127.0.0.1:5060   # CUSTOMIZE ME" "${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END}"
+#addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
+#modify_config "/usr/local/etc/opensips/opensips.cfg" \
+#"listen=udp:127.0.0.1:5060   # CUSTOMIZE ME" \
+#"${OPENSIPS_CONFIG_IP_START}${addrs}${OPENSIPS_CONFIG_IP_END}"
+
+modify_opensips_config
 
 opensipsdbctl create
 
