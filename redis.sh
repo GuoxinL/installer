@@ -40,7 +40,7 @@ make
 make install
 
 # 修改配置文件
-modify_config "/soft/${package_file%%.tar.gz*}/redis.conf" "requirepass" "requirepass 111111"
+modify_config "/soft/${package_file%%.tar.gz*}/redis.conf" "# requirepass foobared" "requirepass 111111"
 
 # 设置为服务
 set_application_as_service ${file_name} "$REDIS_SERVICE_CONF"
