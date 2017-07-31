@@ -28,7 +28,7 @@ fi
 # 定义安装包相关信息
 package_distory="./package/"
 package_file="redis-3.2.9.tar.gz"
-package_url="wget http://download.redis.io/releases/redis-3.2.9.tar.gz"
+package_url="http://download.redis.io/releases/redis-3.2.9.tar.gz"
 
 # 检查安装包是否存在
 check_package ${package_file} ${package_distory} ${package_url}
