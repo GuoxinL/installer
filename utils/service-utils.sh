@@ -102,7 +102,8 @@ function check_system {
 function check_permission {
     user=`whoami`
     if [ "$user" != "root" ]; then
-        echo "You Password" | su root
+        echo "Please use ROOT permission execute the script"
+        exit 2
     fi
 }
 
