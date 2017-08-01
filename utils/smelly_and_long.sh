@@ -85,3 +85,13 @@ OPENSIPS_CONFIG_IP_END=":5060   # CUSTOMIZE ME"
 #   OpenSips Service config
 #
 OPENSIPS_SERVICE_CONF="[Unit]\nDescription=OpenSIPS Service\nAfter=network.target\n\n[Service]\nType=forking\nExecStart=/usr/local/sbin/opensipsctl start\nExecReload=/usr/local/sbin/opensipsctl restart\nExecStop=/usr/local/sbin/opensipsctl stop\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target"
+
+#
+#   Nginx Service config
+#
+NGINX_CONFIG="worker_processes  2;\nerror_log  logs/error.log  info;\npid        logs/nginx.pid;\nevents {\n    worker_connections  1024;\n}\n\nhttp {\n    include       mime.types;\n    default_type  application/octet-stream;\n    sendfile        on;\n    keepalive_timeout  65;\n    client_max_body_size 8M;\n    client_body_buffer_size 128k;\n    \n    server {\n        listen       80;\n        server_name  ms.DOMAIN_NAME;\n        location / {\n            proxy_pass http://127.0.0.1:7000/;\n            proxy_connect_timeout 600;\n            proxy_read_timeout 600;\n            proxy_set_header  Host  $host;\n            proxy_set_header  X-Real-IP  $remote_addr;\n            proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;\n        }\n    }\n    \n    server {\n        listen       80;\n        server_name  wc.DOMAIN_NAME;\n        location / {\n            proxy_pass http://127.0.0.1:8080/;\n            proxy_connect_timeout 600;\n            proxy_read_timeout 600;\n            proxy_set_header  Host  $host;\n            proxy_set_header  X-Real-IP  $remote_addr;\n            proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;\n        }\n    }\n    \n    server {\n        listen       80;\n        server_name  DOMAIN_NAME;\n        location / {\n            proxy_pass http://127.0.0.1:6020/;\n            proxy_connect_timeout 600;\n            proxy_read_timeout 600;\n            proxy_set_header  Host  $host;\n            proxy_set_header  X-Real-IP  $remote_addr;\n            proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;\n        }\n    }\n}"
+
+#
+#   Nginx Service config
+#
+NGINX_SERVICE_CONF="[Unit]\nDescription=Nginx Service\nAfter=network.target\n\n[Service]\nPIDFile=/usr/local/nginx/logs/nginx.pid\nType=simple\nExecStart=/usr/local/nginx/sbin/nginx -c /soft/nginx-1.13.1/conf/nginx.conf\nExecReload=/usr/local/nginx/sbin/nginx -s reload\nExecStop=/bin/kill -s QUIT $MAINPID\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target"
