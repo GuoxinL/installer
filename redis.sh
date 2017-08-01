@@ -30,13 +30,15 @@ package_distory="./package/"
 package_file="redis-3.2.9.tar.gz"
 package_url="http://download.redis.io/releases/redis-3.2.9.tar.gz"
 
+apt install -y make gcc g++
+
 # 检查安装包是否存在
 check_package ${package_file} ${package_distory} ${package_url}
 
 # 解压
 tar -xf ${package_distory}${package_file} -C /soft/
 cd /soft/${package_file%%.tar.gz*}/
-make
+make MALLOC=libc
 make install
 
 # 修改配置文件
