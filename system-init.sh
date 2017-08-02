@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
+############################################################
 
+#         name : System initialization
+
+#         author : liugx@bjnangle.com
+
+############################################################
 
 source ./utils/service-utils.sh
 source ./utils/smelly_and_long.sh
