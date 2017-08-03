@@ -28,11 +28,18 @@ fi
 
 # 定义安装包相关信息
 package_distory="./package/"
-package_file="neo4j-community-3.2.1-unix.tar.gz"
-package_url="https://neo4j.com/artifact.php?name=neo4j-community-3.2.1-unix.tar.gz"
+package_file="jdk1.8.0_131.tar.gz"
+file_exists=`find . -name ${package_file}`
 
-# 检查安装包是否存在
-check_package ${package_file} ${package_distory} ${package_url}
+if [[ -ne $file_exists ]]; then
+    echo "The installation package does not exist"
+    exit 2
+fi
 
 # 解压
 tar -xf ${package_distory}${package_file} -C /soft/
+
+echo -e "export JAVA_HOME=${package_file%%.tar.gz*}\nexport CLASSPATH=$JAVA_HOME/bin\nexport PATH=.:$JAVA_HOME/bin:$PATH\n" >> /etc/profile
+echo -e "source /etc/profile" >> ~/.bashrc
+
+reboot
