@@ -106,11 +106,6 @@ if  [ $? -ne 0 ] ; then
     echo "Initialization data eagle-enum-static-type"
     exit 1
 fi
-/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-ui-template.js
-if  [ $? -ne 0 ] ; then
-    echo "Initialization data eagle-ui-template"
-    exit 1
-fi
 
 append_mongod_config ${package_file%.*}
 
