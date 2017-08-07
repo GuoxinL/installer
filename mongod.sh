@@ -7,7 +7,7 @@
 #         author : liugx@bjnangle.com
 
 ############################################################
-*
+
 source utils/service-utils.sh
 source utils/smelly_and_long.sh
 #${varible##*string} 从左向右截取最后一个string后的字符串
@@ -101,11 +101,11 @@ if  [ $? -ne 0 ] ; then
     echo "Initialization data eagle-dynamic-type"
     exit 1
 fi
-/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-enum-static-type.js
-if  [ $? -ne 0 ] ; then
-    echo "Initialization data eagle-enum-static-type"
-    exit 1
-fi
+#/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-enum-static-type.js
+#if  [ $? -ne 0 ] ; then
+#    echo "Initialization data eagle-enum-static-type"
+#    exit 1
+#fi
 
 append_mongod_config ${package_file%.*}
 
