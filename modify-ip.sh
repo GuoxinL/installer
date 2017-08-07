@@ -17,3 +17,6 @@ modify_config "/etc/systemd/system/garuda.service" "192.168.3.80" "${addrs}"
 
 # modify opensips config
 modify_config "/usr/local/etc/opensips/opensips.cfg" "192.168.3.80" "${addrs}"
+
+modify_config "/etc/systemd/system/garuda.service" "192.168.3.80" "${addrs}"
+modify_config "/etc/systemd/system/birdnest.service" "192.168.3.80" "${addrs}"

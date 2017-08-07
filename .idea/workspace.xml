@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="modify java-tar-gz.sh&#10;Initialization mongodb data">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/eagle-ui-template.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modify-ip.sh" />
+    <list default="true" id="b99c7ea9-22c6-4474-aa33-5955689fe8d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongod.sh" afterPath="$PROJECT_DIR$/mongod.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modify-ip.sh" afterPath="$PROJECT_DIR$/modify-ip.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mongod.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mongod.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongod.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="102" column="2" lean-forward="true" selection-start-line="102" selection-start-column="2" selection-end-line="102" selection-end-column="2" />
+            <state relative-caret-position="126">
+              <caret line="88" column="17" lean-forward="true" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -54,28 +52,18 @@
       <file leaf-file-name="smelly_and_long.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="486">
               <caret line="34" column="101" lean-forward="false" selection-start-line="34" selection-start-column="101" selection-end-line="34" selection-end-column="130" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="service-utils.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2286">
-              <caret line="127" column="9" lean-forward="false" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modify-ip.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modify-ip.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modify-ip.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -182,9 +170,9 @@
         <option value="$PROJECT_DIR$/utils/eagle-device-template-binding.js" />
         <option value="$PROJECT_DIR$/node-js.sh" />
         <option value="$PROJECT_DIR$/java-tar-gz.sh" />
-        <option value="$PROJECT_DIR$/modify-ip.sh" />
         <option value="$PROJECT_DIR$/data/eagle-date-template.js" />
         <option value="$PROJECT_DIR$/mongod.sh" />
+        <option value="$PROJECT_DIR$/modify-ip.sh" />
       </list>
     </option>
   </component>
@@ -433,13 +421,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500272541739</updated>
-    </task>
-    <task id="LOCAL-00069" summary="delete --eval">
-      <created>1500874684333</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1500874684334</updated>
     </task>
     <task id="LOCAL-00070" summary="delete --eval">
       <created>1500874867904</created>
@@ -777,7 +758,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501740968942</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="add modify ip script">
+      <created>1502065799742</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1502065799743</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TodoView">
@@ -873,7 +861,8 @@
     <MESSAGE value="fix bug dependence" />
     <MESSAGE value="fix bug CONFIG" />
     <MESSAGE value="modify java-tar-gz.sh&#10;Initialization mongodb data" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify java-tar-gz.sh&#10;Initialization mongodb data" />
+    <MESSAGE value="add modify ip script" />
+    <option name="LAST_COMMIT_MESSAGE" value="add modify ip script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1083,22 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="101" lean-forward="false" selection-start-line="34" selection-start-column="101" selection-end-line="34" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2286">
-          <caret line="127" column="9" lean-forward="false" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/eagle-dynamic-type.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -1128,14 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modify-ip.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/eagle-date-template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1154,8 +1119,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mongod.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="102" column="2" lean-forward="true" selection-start-line="102" selection-start-column="2" selection-end-line="102" selection-end-column="2" />
+        <state relative-caret-position="126">
+          <caret line="88" column="17" lean-forward="true" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/service-utils.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="112" column="46" lean-forward="false" selection-start-line="112" selection-start-column="46" selection-end-line="112" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/smelly_and_long.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="34" column="101" lean-forward="false" selection-start-line="34" selection-start-column="101" selection-end-line="34" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modify-ip.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>
