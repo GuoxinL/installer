@@ -66,7 +66,7 @@ addrs=`/sbin/ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $
 modify_config "/usr/local/etc/opensips/opensips.cfg" \
 "listen=udp:127.0.0.1:5060   # CUSTOMIZE ME" \
 "listen=udp:${addrs}:5060   # CUSTOMIZE ME"
-
+echo "please entry mysql password `root`"
 opensipsdbctl create
 
 # 设置为服务

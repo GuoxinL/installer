@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 source ../utils/service-utils.sh
-
+source ../utils/smelly_and_long.sh
 package_file="mongodb-linux-x86_64-ubuntu1604-3.4.4.tar.gz"
 echo ${package_file%%.tar.gz*}
 
@@ -11,7 +11,7 @@ varible2="12345${varible%%.*}67890qwertyuiopasdfghjklzxcvbnm"
 echo $varible2
 
 
-application_conf="[Unit]\nDescription=Neo4j Service\nAfter=network.target\n\n[Service]\nType=forking\nExecStart=/soft/neo4j-community-3.2.1/bin/neo4j start\nExecReload=/soft/neo4j-community-3.2.1/bin/neo4j restart\nExecStop=/soft/neo4j-community-3.2.1/bin/neo4j stop\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target"
+application_conf="[Unit]\nDescription=Apollo Service\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/var/lib/birdnest/bin/apollo-broker run\nRestartSec=10\n\n[Install]\nWantedBy=multi-user.target\n"
 
 echo -e $application_conf
 
@@ -31,3 +31,4 @@ check_permission
 file_name=`get_file_name`
 
 echo ${file_name}
+echo -e $APOLLO_SERVICE_CONF
