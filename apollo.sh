@@ -4,7 +4,7 @@
 
 #         name : Install Apollo
 
-#         author : liugx@bjnangle.com
+#         author : lgx31@sina.cn
 
 ############################################################
 

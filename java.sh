@@ -4,7 +4,7 @@
 
 #         name : Install MongoDB
 
-#         author : liugx@bjnangle.com
+#         author : lgx31@sina.cn
 
 ############################################################
 #
