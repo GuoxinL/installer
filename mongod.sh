@@ -86,21 +86,21 @@ if  [ $? -ne 0 ] ; then
     echo "Create user birdnest fail!!!"
     exit 1
 fi
-/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-date-template.js
-if  [ $? -ne 0 ] ; then
-    echo "Initialization data eagle-date-template"
-    exit 1
-fi
-/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-device-template-binding.js
-if  [ $? -ne 0 ] ; then
-    echo "Initialization data eagle-device-template-binding"
-    exit 1
-fi
-/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-dynamic-type.js
-if  [ $? -ne 0 ] ; then
-    echo "Initialization data eagle-dynamic-type"
-    exit 1
-fi
+#/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-date-template.js
+#if  [ $? -ne 0 ] ; then
+#    echo "Initialization data eagle-date-template"
+#    exit 1
+#fi
+#/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-device-template-binding.js
+#if  [ $? -ne 0 ] ; then
+#    echo "Initialization data eagle-device-template-binding"
+#    exit 1
+#fi
+#/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-dynamic-type.js
+#if  [ $? -ne 0 ] ; then
+#    echo "Initialization data eagle-dynamic-type"
+#    exit 1
+#fi
 #/soft/${package_file%.*}/bin/mongo localhost:27117 ./data/eagle-enum-static-type.js
 #if  [ $? -ne 0 ] ; then
 #    echo "Initialization data eagle-enum-static-type"
@@ -128,4 +128,5 @@ if  [ $? -ne 0 ] ; then
 fi
 echo "Mongo login success."
 # 检查是否安装成功
-check_is_active_over ${file_name}
+check_is_active_over ${file_name};
+
